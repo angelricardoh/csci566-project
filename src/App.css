@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+  background-color: lightgray;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+h2 {
+  padding-top: 10pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+}
+
+h4 {
+  padding-top: 10pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+}
+
+p {
+  padding-left: 20pt;
+  padding-right: 20pt;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#motivation_pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#more_motivation_pics_div {
+  display: block;
+  text-align: center;
+  padding-top: 10pt;
+}
+
+img {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+#container {
+  background-color: white;
+  padding: 20pt;
+}
+
+#outer_container {
+  background-color: lightgray;
+  padding: 25pt;
+}
+
+table {
+  margin: 0 auto;
+  margin-bottom: 20pt;
+}
+
+table, th, td {
+  text-align: center;
+  border: 1px solid black;
+  padding-bottom: 5pt;
+}
