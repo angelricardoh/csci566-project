@@ -1,7 +1,7 @@
 import React from "react";
 import Motivation1 from './images/Motivation1.png'
-import Motivation2 from './images/Motivation2.gif'
-import Motivation3 from './images/Motivation3.gif'
+import SDCAR from './images/SDCAR.gif'
+import SDCAR2 from './images/SDCAR2.gif'
 import SLSTM0 from './images/SLSTM0.png'
 import SLSTM1 from './images/SLSTM1.png'
 import SLSTM2 from './images/SLSTM2.png'
@@ -17,8 +17,8 @@ function MainContainer(props) {
                 </p>
                 <img id='motivation_pic' alt="Motivation1" src={Motivation1} class='center'/>
                 <div id='more_motivation_pics_div'>
-                    <img alt="Picture2" src={Motivation2}/>
-                    <img alt="Picture3" src={Motivation3}/>
+                    <img alt="Picture2" src={SDCAR}/>
+                    <img alt="Picture3" src={SDCAR2}/>
                 </div>
                 <h2>Motivation</h2>
                 <p>Autonomous vehicles are the future of on land mobility for mankind. But, we are still far fetched from seamless autonomous transportation and we need to resolve many significant challenges before we can truly travel autonomous. One of the most important aspects of any autonomous system is the prediction of the next move, let it be an automatic game, or even an automatic vehicle, the challenge to predict the next move is significant for its success. It's of utmost importance to correctly predict the next position of the vehicle as it will not only determine the direction in which the vehicle should move but will also impact the safety of the passenger and also others on the road.What makes this challenge even more critical is the fact that the next position of the vehicle should be determined keeping in mind not only the surroundings but also the destination and traffic agents. The impact of this solution is enormous in autonomous vehicles being successful and making transportation seamless and safe which has been a driving force behind us choosing to work on this problem statement. It is an exciting opportunity to work on a problem that will solve some pressing real world use case and make a global impact.

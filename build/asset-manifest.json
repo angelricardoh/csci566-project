@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/csci566-project/static/css/main.6b2dffb4.chunk.css",
-    "main.js": "/csci566-project/static/js/main.3051d0b9.chunk.js",
-    "main.js.map": "/csci566-project/static/js/main.3051d0b9.chunk.js.map",
+    "main.js": "/csci566-project/static/js/main.e5e128a1.chunk.js",
+    "main.js.map": "/csci566-project/static/js/main.e5e128a1.chunk.js.map",
     "runtime-main.js": "/csci566-project/static/js/runtime-main.04adcb92.js",
     "runtime-main.js.map": "/csci566-project/static/js/runtime-main.04adcb92.js.map",
     "static/css/2.1a02f21c.chunk.css": "/csci566-project/static/css/2.1a02f21c.chunk.css",
@@ -15,8 +15,8 @@
     "static/css/main.6b2dffb4.chunk.css.map": "/csci566-project/static/css/main.6b2dffb4.chunk.css.map",
     "static/js/2.8892c0f2.chunk.js.LICENSE.txt": "/csci566-project/static/js/2.8892c0f2.chunk.js.LICENSE.txt",
     "static/media/Motivation1.7da28e5e.png": "/csci566-project/static/media/Motivation1.7da28e5e.png",
-    "static/media/Motivation2.d1fdaced.gif": "/csci566-project/static/media/Motivation2.d1fdaced.gif",
-    "static/media/Motivation3.54aac68c.gif": "/csci566-project/static/media/Motivation3.54aac68c.gif",
+    "static/media/SDCAR.f1dc928a.gif": "/csci566-project/static/media/SDCAR.f1dc928a.gif",
+    "static/media/SDCAR2.462f0ff0.gif": "/csci566-project/static/media/SDCAR2.462f0ff0.gif",
     "static/media/SLSTM1.53c7ec37.png": "/csci566-project/static/media/SLSTM1.53c7ec37.png",
     "static/media/SLSTM2.87ffcdf1.png": "/csci566-project/static/media/SLSTM2.87ffcdf1.png",
     "static/media/SLSTM3.0e772885.png": "/csci566-project/static/media/SLSTM3.0e772885.png",
@@ -37,6 +37,6 @@
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.8892c0f2.chunk.js",
     "static/css/main.6b2dffb4.chunk.css",
-    "static/js/main.3051d0b9.chunk.js"
+    "static/js/main.e5e128a1.chunk.js"
   ]
 }
