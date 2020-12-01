@@ -1,34 +1,54 @@
 import React from "react";
-import Motivation1 from './images/Motivation1.png'
-import SDCAR from './images/SDCAR.gif'
-import SDCAR2 from './images/SDCAR2.gif'
-import SLSTM0 from './images/SLSTM0.png'
-import SLSTM1 from './images/SLSTM1.png'
-import SLSTM2 from './images/SLSTM2.png'
-import SLSTM3 from './images/SLSTM3.png'
+import Motivation1 from './images/main/Motivation1.png'
+import SDCAR from './images/main/SDCAR.gif'
+import SDCAR2 from './images/main/SDCAR2.gif'
+import SLSTM0 from './images/main/SLSTM0.png'
+import SLSTM1 from './images/main/SLSTM1.png'
+import SLSTM2 from './images/main/SLSTM2.png'
+import SLSTM3 from './images/main/SLSTM3.png'
 import "./MainContainer.css";
+
+// path="/resnet-gru"
+// component={() => <ResnetGNU key='resnet-gru' page='resnet-gru'/>}
+// />
+// <Route exact
+// path="/lstm"
+// component={() => <LSTM key='lstm' page='lstm'/>}
+// />
+// <Route exact
+// path="/seq2seq"
+// component={() => <Seq2Seq key='seq2seq' page='seq2seq'/>}
+// />
+// <Route exact
+// path="/vae-lstm"
+// component={() => <VAELSTM key='vae-lstm' page='vae-lstm'/>}
+// />
+// <Route exact
+// path="/seq2seqGAN"
+// component={() => <Seq2SeqGAN key='seq2seqGAN' page='seq2seqGAN'/>}
+// />
+// <Route exact
+// path="/s-lstm"
 
 function MainContainer(props) {
     return (
         <div id='outer_container'>
             <div id='container'>
                 <h2>Problem Statement</h2>
-                <p>One of the most primitive tasks of autonomous vehicles is to predict the future positions of other vehicles and the vehicle itself amidst traffic. In this project, we aim to predict the future positions of the other vehicles/agents (cyclists/cars/pedestrians). We are using the dataset provided by Lyft known as the l5kit. This dataset contains over 1000 hours of scenes with labeled positional information of objects in the scene such as vehicles, cyclists, and pedestrians. The scenes in the dataset are from a 6.8 mile route chosen by the Lyft team. The input data will be the sequence of spatial coordination about each vehicle (both for train and test) which can also include road information of the given agents environment.  The output will be the future spatial coordination. Given the uncertainty of live traffic, we have also aimed to predict the future positions for multiple trajectories. 
-                </p>
+                <p>One of the most primitive tasks of autonomous vehicles is to predict the future positions of other vehicles and the vehicle itself amidst traffic. In this project, we aim to predict the future positions of the other vehicles/agents (cyclists/cars/pedestrians). 
+We are using the dataset provided by Lyft known as the l5kit. This dataset contains over 1000 hours of scenes with labeled positional information of objects in the scene such as vehicles, cyclists, and pedestrians. The scenes in the dataset are from a 6.8 mile route chosen by the Lyft team. The input data will be the sequence of spatial coordination about each vehicle (both for train and test) which can also include road information of the given agents environment.  The output will be the future spatial coordination. Given the uncertainty of live traffic, we have also aimed to predict the future positions for multiple trajectories.</p>
                 <img id='motivation_pic' alt="Motivation1" src={Motivation1} class='center'/>
                 <div id='more_motivation_pics_div'>
                     <img alt="Picture2" src={SDCAR}/>
                     <img alt="Picture3" src={SDCAR2}/>
                 </div>
                 <h2>Motivation</h2>
-                <p>Autonomous vehicles are the future of on land mobility for mankind. But, we are still far fetched from seamless autonomous transportation and we need to resolve many significant challenges before we can truly travel autonomous. One of the most important aspects of any autonomous system is the prediction of the next move, let it be an automatic game, or even an automatic vehicle, the challenge to predict the next move is significant for its success. It's of utmost importance to correctly predict the next position of the vehicle as it will not only determine the direction in which the vehicle should move but will also impact the safety of the passenger and also others on the road.What makes this challenge even more critical is the fact that the next position of the vehicle should be determined keeping in mind not only the surroundings but also the destination and traffic agents. The impact of this solution is enormous in autonomous vehicles being successful and making transportation seamless and safe which has been a driving force behind us choosing to work on this problem statement. It is an exciting opportunity to work on a problem that will solve some pressing real world use case and make a global impact.
-                </p>
-                <h2>
-                    Methods
-                    </h2>
-                    <h4>Social LSTM and its variant</h4>
-                    <p>-
-                Based on Alexandre etc’s research, we tried to take the neighbor’s effect into consideration combined with LSTM model. We added a max-pooling layer between each time stamp, its formulation will be:</p>
+                <p>Autonomous vehicles are the future of on land mobility for mankind. But, we are still far fetched from seamless autonomous transportation and we need to resolve many significant challenges before we can truly travel autonomous. One of the most important aspects of any autonomous system is the prediction of the next move, let it be an automatic game, or even an automatic vehicle, the challenge to predict the next move is significant for its success. It's of utmost importance to correctly predict the next position of the vehicle as it will not only determine the direction in which the vehicle should move but will also impact the safety of the passenger and also others on the road. What makes this challenge even more critical is the fact that the next position of the vehicle should be determined keeping in mind not only the surroundings but also the destination and traffic agents. The impact of this solution is enormous in autonomous vehicles being successful and making transportation seamless and safe which has been a driving force behind us choosing to work on this problem statement. It is an exciting opportunity to work on a problem that will solve some pressing real world use cases and make a global impact.</p>
+                <h2>Methods</h2>
+                <p>To resolve this issue, we have implemented various methods and compared their performance by test loss in the Result section below. 
+Firstly, we explored <a href='/resnet-gru'><b>Resnet-Gru</b></a> and <a href='/lstm'><b>LSTM/Seq2Seq LSTM</b></a> models. Based on the LSTM model, we added VAE and GAN structure and created VAE+LSTM and Seq2Seq GAN. And finally, we implemented Social LSTM which incorporates the neighbors' effect into the model</p>
+                <h4>Social LSTM and its variant</h4>
+                <p>-Based on Alexandre etc’s research, we tried to take the neighbor’s effect into consideration combined with LSTM model. We added a max-pooling layer between each time stamp, its formulation will be:</p>
                 <div style={{textAlign: 'center'}}> 
                     <img src={SLSTM0}/>
                     <img src={SLSTM1}/>

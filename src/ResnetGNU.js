@@ -1,15 +1,15 @@
 import React from "react";
-import resnetgru1 from './images/resnetgru1.png'
-import resnetgru2 from './images/resnetgru2.png'
-import resnetgru3 from './images/resnetgru3.png'
-import resnetgru4 from './images/resnetgru4.png'
-import resnetgru5 from './images/resnetgru5.png'
-import resnetgru6 from './images/resnetgru6.png'
-import resnetgru7 from './images/resnetgru7.png'
-import resnetgru8 from './images/resnetgru8.png'
-import resnetgrutable1 from './images/resnetgrutable1.png'
-import resnetgrutable2 from './images/resnetgrutable2.png'
-import resnetgrutable3 from './images/resnetgrutable3.png'
+import resnetgru1 from './images/resnetgru/resnetgru1.png'
+import resnetgru2 from './images/resnetgru/resnetgru2.png'
+import resnetgru3 from './images/resnetgru/resnetgru3.png'
+import resnetgru4 from './images/resnetgru/resnetgru4.png'
+import resnetgru5 from './images/resnetgru/resnetgru5.png'
+import resnetgru6 from './images/resnetgru/resnetgru6.png'
+import resnetgru7 from './images/resnetgru/resnetgru7.png'
+import resnetgru8 from './images/resnetgru/resnetgru8.png'
+import resnetgrutable1 from './images/resnetgru/resnetgrutable1.png'
+import resnetgrutable2 from './images/resnetgru/resnetgrutable2.png'
+import resnetgrutable3 from './images/resnetgru/resnetgrutable3.png'
 
 function ResnetGNU(props) {
     return (
