@@ -1,0 +1,11 @@
+img[src*="vae1"] {
+    width: 50%
+}
+
+.loss {
+    width: 50%;
+}
+
+.grid {
+    width: 33%;
+}
