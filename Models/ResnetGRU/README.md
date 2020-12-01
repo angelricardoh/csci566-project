@@ -1,4 +1,4 @@
-# Resnet-GRU model
+**Resnet-GRU model**
 
 Our first model was an attempt to create a baseline for the problem at
 hand. The model was based on a pre-trained Resnet_34 network which was
@@ -54,11 +54,11 @@ process described above is represented diagrammatically below.
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru1.png)
 
-Fig 1. Model journey
+                          Fig 1. Model journey
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru2.png)
 
-Fig 2. Output generation
+ Fig 2. Output generation
 
 For our experiments we executed our model multiple times on the training
 data to improve its performance. One of the critical things we ensured
@@ -73,21 +73,21 @@ the details of the three rounds of experiments conducted by us.
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru3.png)
 
-Fig 3. Cycle 1 average training loss curve
+                          Fig 3. Cycle 1 average training loss curve
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru4.png)
 
-Fig 4. Cycle 2 average training loss curve
+                          Fig 4. Cycle 2 average training loss curve
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru5.png)
 
-Fig 5. Cycle 3 average training loss curve
+                          Fig 5. Cycle 3 average training loss curve
 
-Prediction loss on test dataset evaluated by Kaggle:
+                          Prediction loss on test dataset evaluated by Kaggle:
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru6.png)
 
-Fig 6. Best test result from kaggle submission
+                          Fig 6. Best test result from kaggle submission
 
 We also tried to train our model using a different loss function to
 compare the model's performance
@@ -96,11 +96,11 @@ compare the model's performance
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru7.png)
 
-Fig 7. Training and Validation loss for MSE
+                          Fig 7. Training and Validation loss for MSE
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru8.png)
 
-Fig 8. Training loss for rMSE
+                          Fig 8. Training loss for rMSE
 
 **Prediction trajectory visualization**
 
