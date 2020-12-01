@@ -52,13 +52,7 @@ probabilities using softmax. The final predicted outputs had shape
 (batch_size, num_of_trajectories). The model and output generation
 process described above is represented diagrammatically below.
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru1.png)
-
-                          Fig 1. Model journey
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru2.png)
-
- Fig 2. Output generation
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/img1.png)
 
 For our experiments we executed our model multiple times on the training
 data to improve its performance. One of the critical things we ensured
@@ -69,38 +63,18 @@ each such cycle to observe the models performance. The predictions were
 evaluated by Kaggle using a negative log likelihood function. Below are
 the details of the three rounds of experiments conducted by us.
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgrutable1.png)
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/img2.png)
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru3.png)
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/img3.png)
 
-                          Fig 3. Cycle 1 average training loss curve
+Prediction loss on test dataset evaluated by Kaggle:
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru4.png)
-
-                          Fig 4. Cycle 2 average training loss curve
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru5.png)
-
-                          Fig 5. Cycle 3 average training loss curve
-
-                          Prediction loss on test dataset evaluated by Kaggle:
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru6.png)
-
-                          Fig 6. Best test result from kaggle submission
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/img4.png)
 
 We also tried to train our model using a different loss function to
 compare the model's performance
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgrutable2.png)
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru7.png)
-
-                          Fig 7. Training and Validation loss for MSE
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru8.png)
-
-                          Fig 8. Training loss for rMSE
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/img5.png)
 
 **Prediction trajectory visualization**
 
@@ -119,7 +93,4 @@ represented by color green is dominant and as the model improves it
 reaffirms trajectory 3 with the highest confidence of 0.943. The
 visualizations are represented in both semantic and satellite view.
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/Resnet-GRU_9.png)
-
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/Resnet-GRU_10.png)
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/img6.png)
