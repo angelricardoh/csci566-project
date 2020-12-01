@@ -30,6 +30,8 @@ table, th, td {
 
 caption {
   white-space: nowrap;
+  text-align: center;
+  color: black;
 }
 
 .ganmodel {
@@ -46,4 +48,8 @@ caption {
 
 .link {
   color: #000;
+}
+
+.figcaption {
+  text-align: center;
 }
