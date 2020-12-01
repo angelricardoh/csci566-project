@@ -1,5 +1,6 @@
 import React from "react";
 import BaseComponent from './BaseComponent'
+
 import "./Seq2Seq.css";
 
 export default class Seq2Seq extends BaseComponent {
