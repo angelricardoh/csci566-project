@@ -164,9 +164,30 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
                     <p>While Social LSTM was not the best performer, we believe in its potential and that our current architecture or even a slightly modified version can achieve a much lower loss, especially with more training. Moreover, due to computational constraints, our social LSTM does not differentiate different types of objects (i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories. This loss of information could prevent the model from achieving a better loss.
 Our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed extremely well, allowing our Seq2Seq GAN model to achieve the best test loss. </p>
                     <h2>Future Work</h2>
-                    <p>
-                    It would be interesting to try some transformer based networks for trajectory prediction and compare its performance with other models. This dataset contains multiple facets of vehicle information like historical availability, various views like semantic, satellite, etc.  which can be utilized to get more precise predictions. Also, for the seq-to-seq gan model, combining it with some CNN-based architecture to incorporate image information to improve the generator would be a good idea to explore. 
+                    <p>Although we implemented various models and tried many different approaches with those models, we found some limitations on our models from our experiments and they still give us chances to enhance our models with future works.</p>
+                    <p>For Seq2Seq GAN,  it didn’t consider
+                        <ul>
+                            <li>the road information therefore, the generated predictions can fall off the roads.</li>
+                            <li>the interaction with neighbors including other cars, pedestrians, or cyclists.</li>
+                        </ul>
                     </p>
+             
+                    <p>To complement these limitations and improve our Seq2Seq GAN Model, we can introduce the following methods in the future work.
+                        <ul>
+                            <li>Training the model with optimal parameters and with more epochs.</li>
+                            <li>Combining with a CNN model including road information from images.</li>
+                            <li>Applying the concept of Social GAN which embraces interactions among neighbors.</li>
+                        </ul>
+                    </p>
+  
+                    <p>For our Social LSTM, the current model does not 
+                        <ul><li>differentiate different types of objects(i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories because of computational constraints.</li></ul>
+                    </p>
+                    <p>However, we believe that our Social LSTM model can provide more precise predictions with much lower loss if we apply the former approach and train it with more epochs.  </p>
+                    <p>One potential approach we had hoped to try was utilizing a transformer based network to compare its performance with other models. This dataset contains multiple facets of vehicle information like historical availability, various views like semantic, satellite, etc.  which can be utilized to get more precise predictions. </p>
+
+                    <h2>Conclusion</h2>
+                    <p>All in all, we are excited about our results and our model’s ability to surpass the baseline model. Our approach to this problem was to perform an in-depth analysis of several deep learning approaches, testing many architectures like CNN-GRU, LSTM, and GAN. Through our testing, we were able to iterate on our architectures through both parameter tuning and changes to the structure of each model. With these trials, we were able to get a holistic view of the problem and gain an understanding of how changes to our architectures can impact its performance. Our iterative approach sparked our interest in utilizing the Seq2Seq model on top of our existing architectures or even prompted us to apply advanced techniques like Social GAN and tweak its architecture to best match our dataset. For more information on other architectures we tested, please see the other tabs listed at the top of the page.</p>
             </div>
         </div>
     )
