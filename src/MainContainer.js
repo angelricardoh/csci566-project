@@ -6,6 +6,7 @@ import SLSTM0 from './images/main/SLSTM0.png'
 import SLSTM1 from './images/main/SLSTM1.png'
 import SLSTM2 from './images/main/SLSTM2.png'
 import SLSTM3 from './images/main/SLSTM3.png'
+import { BrowserRouter, Link } from "react-router-dom";
 import "./MainContainer.css";
 
 // path="/resnet-gru"
@@ -46,7 +47,7 @@ We are using the dataset provided by Lyft known as the l5kit. This dataset conta
                 <p>Autonomous vehicles are the future of on land mobility for mankind. But, we are still far fetched from seamless autonomous transportation and we need to resolve many significant challenges before we can truly travel autonomous. One of the most important aspects of any autonomous system is the prediction of the next move, let it be an automatic game, or even an automatic vehicle, the challenge to predict the next move is significant for its success. It's of utmost importance to correctly predict the next position of the vehicle as it will not only determine the direction in which the vehicle should move but will also impact the safety of the passenger and also others on the road. What makes this challenge even more critical is the fact that the next position of the vehicle should be determined keeping in mind not only the surroundings but also the destination and traffic agents. The impact of this solution is enormous in autonomous vehicles being successful and making transportation seamless and safe which has been a driving force behind us choosing to work on this problem statement. It is an exciting opportunity to work on a problem that will solve some pressing real world use cases and make a global impact.</p>
                 <h2>Methods</h2>
                 <p>To resolve this issue, we have implemented various methods and compared their performance by test loss in the Result section below. 
-Firstly, we explored <a href='/resnet-gru'><b>Resnet-Gru</b></a> and <a href='/lstm'><b>LSTM/Seq2Seq LSTM</b></a> models. Based on the LSTM model, we added VAE and GAN structure and created VAE+LSTM and Seq2Seq GAN. And finally, we implemented Social LSTM which incorporates the neighbors' effect into the model</p>
+Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link to='/lstm'><b>LSTM/Seq2Seq LSTM</b></Link> models. Based on the LSTM model, we added VAE and GAN structure and created VAE+LSTM and Seq2Seq GAN. And finally, we implemented Social LSTM which incorporates the neighbors' effect into the model</p>
                 <h4>Social LSTM and its variant</h4>
                 <p>-Based on Alexandre etc’s research, we tried to take the neighbor’s effect into consideration combined with LSTM model. We added a max-pooling layer between each time stamp, its formulation will be:</p>
                 <div style={{textAlign: 'center'}}> 
@@ -144,10 +145,8 @@ Firstly, we explored <a href='/resnet-gru'><b>Resnet-Gru</b></a> and <a href='/l
                             <td>3.55784371</td>
                         </tr>
                     </table>
-                    <p>
-                        While Social LSTM was not the best performer, we believe in its potential and that our current architecture or even a slightly modified version can achieve a much lower loss, especially with more training. Moreover, due to computational constraints, our social LSTM does not differentiate different types of objects (i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories. This loss of information could prevent the model from achieving a better loss.
-Our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed extremely well, allowing our Seq2Seq GAN model to achieve the best test loss. 
-                    </p>
+                    <p>While Social LSTM was not the best performer, we believe in its potential and that our current architecture or even a slightly modified version can achieve a much lower loss, especially with more training. Moreover, due to computational constraints, our social LSTM does not differentiate different types of objects (i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories. This loss of information could prevent the model from achieving a better loss.
+Our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed extremely well, allowing our Seq2Seq GAN model to achieve the best test loss. </p>
                     <h2>Future Work</h2>
                     <p>
                     It would be interesting to try some transformer based networks for trajectory prediction and compare its performance with other models. This dataset contains multiple facets of vehicle information like historical availability, various views like semantic, satellite, etc.  which can be utilized to get more precise predictions. Also, for the seq-to-seq gan model, combining it with some CNN-based architecture to incorporate image information to improve the generator would be a good idea to explore. 

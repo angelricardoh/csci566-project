@@ -1,14 +1,15 @@
 import React from "react";
+import BaseComponent from './BaseComponent'
 import "./SocialLSTM.css";
 
-function SocialLSTM(props) {
-    return (
-        <div id='outer_container'>
-            <div id='container'>
-                Detailed information of SocialLSTM
+export default class SocialLSTM extends BaseComponent {
+    render() {
+        return (
+            <div id='outer_container'>
+                <div id='container'>
+                    Detailed information of SocialLSTM
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
-export default SocialLSTM;
