@@ -20,7 +20,7 @@ All of these LSTM variations performed well, quickly being able to stabilize and
 
 ![LSTM Bar](../../src/images/LSTM-Bar.png)
 
-Given the success of these architectures, we wanted to see if we could apply Sequence2Sequence model using the same general structure. As a result, we developed four similar models, replacing the single LSTM from the previous models with an encoder and decoder LSTM. The encoder took in the temporal input from our dataset. The decoder took in the last hidden state from the encoder and predicted the next 50 positions of the agent. We also tested a variation in which only the last decoder output was used to make the prediction, putting the output through a fully connected layer and predicting 50 time steps at once. This variation achieved decent accuracy though still performed worse than the standard Seq2Seq implementation.
+Given the success of these architectures, we wanted to see if we could apply the Seq2Seq architecture using the same general structure. As a result, we developed four similar models, replacing the single LSTM from the previous models with an encoder and decoder LSTM. The encoder took in the temporal input from our dataset. The decoder took in the last hidden state from the encoder and predicted the next 50 positions of the agent. We also tested a variation in which only the last decoder output was used to make the prediction, putting the output through a fully connected layer and predicting 50 time steps at once. This variation achieved decent accuracy though still performed worse than the standard Seq2Seq implementation.
  
 ![Seq2Seq Models](../../src/images/SeqLSTM-Models.png)
 
