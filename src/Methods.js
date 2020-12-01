@@ -32,12 +32,12 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
                     <td>Test Loss(MSE)</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq GAN Model-1</td>
+                    <td>Seq2Seq GAN1</td>
                     <td>1</td>
                     <td>2.6551</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq GAN Model-2</td>
+                    <td>Seq2Seq GAN2</td>
                     <td>1</td>
                     <td>2.2576</td>
                 </tr>
