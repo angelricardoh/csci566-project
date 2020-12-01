@@ -1,5 +1,4 @@
 # Resnet-GRU model
-**Resnet-GRU model**
 
 Our first model was an attempt to create a baseline for the problem at
 hand. The model was based on a pre-trained Resnet_34 network which was
@@ -70,70 +69,36 @@ each such cycle to observe the models performance. The predictions were
 evaluated by Kaggle using a negative log likelihood function. Below are
 the details of the three rounds of experiments conducted by us.
 
-  Cycle no.   Experiment details                                                            Loss function             Learning rate   Iterations   Average training Loss   Average test loss
-  ----------- ----------------------------------------------------------------------------- ------------------------- --------------- ------------ ----------------------- -------------------
-  1           Model is trained for the first 12000 iterations                               Negative log Likelihood   1e-4            12000        129.41                  143.07
-  2           Model state and optimizer state from cycle 1 is taken as the starting state   Negative log Likelihood   1e-3            12000        59.62                   76.86
-  3           Model state and optimizer state from cycle 2 is taken as the starting state   Negative log Likelihood   1e-4            12000        42.98                   63.62
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgrutable1.png)
 
-Table 1. Experiment details using negative log likelihood loss function
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru3.png){width="5.161458880139983in"
-height="1.8635892388451443in"}
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru3.png)
 
 Fig 3. Cycle 1 average training loss curve
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru4.png){width="5.005208880139983in"
-height="1.8260968941382327in"}
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru4.png)
 
 Fig 4. Cycle 2 average training loss curve
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru5.png){width="5.265625546806649in"
-height="1.924601924759405in"}
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru5.png)
 
 Fig 5. Cycle 3 average training loss curve
 
 Prediction loss on test dataset evaluated by Kaggle:
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru6.png){width="6.267716535433071in"
-height="1.1944444444444444in"}
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru6.png)
 
 Fig 6. Best test result from kaggle submission
 
 We also tried to train our model using a different loss function to
 compare the model's performance
 
-+---------+---------+---------+---------+---------+---------+---------+
-| Cycle   | Exp     | Loss    | L       | Ite     | Average | Average |
-| no.     | eriment | f       | earning | rations | t       | test    |
-|         | details | unction | rate    |         | raining | loss    |
-|         |         |         |         |         | Loss    |         |
-|         |         |         |         |         |         | (neg    |
-|         |         |         |         |         |         | log)    |
-+=========+=========+=========+=========+=========+=========+=========+
-| 1       | Model   | MSE     | 1e-4    | 12000   | 5.35    | 7131.07 |
-|         | is      |         |         |         |         |         |
-|         | trained |         |         |         | (5.4    |         |
-|         | with    |         |         |         | val     |         |
-|         | only 1  |         |         |         | loss)   |         |
-|         | mode    |         |         |         |         |         |
-+---------+---------+---------+---------+---------+---------+---------+
-| 2       | Model   | rMSE    | 1e-4    | 12000   | 1.53    | 193.90  |
-|         | is      |         |         |         |         |         |
-|         | trained |         |         |         |         |         |
-|         | with 3  |         |         |         |         |         |
-|         | modes   |         |         |         |         |         |
-+---------+---------+---------+---------+---------+---------+---------+
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgrutable2.png)
 
-Table 2. Experiment details using MSE and rMSE loss function
-
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru7.png){width="5.026042213473316in"
-height="2.0104166666666665in"}
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru7.png)
 
 Fig 7. Training and Validation loss for MSE
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru8.png){width="5.121350612423447in"
-height="1.866946631671041in"}
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/resnetgru8.png)
 
 Fig 8. Training loss for rMSE
 
@@ -157,4 +122,4 @@ visualizations are represented in both semantic and satellite view.
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/Resnet-GRU_9.png)
 
 
-![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/Resnet-GRU_9.png)
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/resnetgru/Resnet-GRU_10.png)
