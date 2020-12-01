@@ -32,6 +32,10 @@ caption {
   white-space: nowrap;
 }
 
+.ganmodel {
+  width: 80%;
+}
+
 .model {
   width: 50%;
 }

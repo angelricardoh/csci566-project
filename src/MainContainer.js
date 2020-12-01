@@ -33,11 +33,11 @@ We are using the dataset provided by Lyft known as the l5kit. This dataset conta
 Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link to='/lstm'><b>LSTM/Seq2Seq LSTM</b></Link> models. Based on the LSTM model, we added VAE and GAN structure and created <Link to='/vae-lstm'><b>VAE+LSTM</b></Link> and <Link to='/seq2seqGAN'><b>Seq2Seq GAN</b></Link>. And finally, we implemented <Link to='/s-lstm'><b>Social LSTM</b></Link> which incorporates the neighbors' effect into the model</p>
                 <p>In this page, we mainly talk about the two most interesting models among these. For the detailed information about each model we created, please check the other tabs.</p>
                 <p><i><b><Link to='/seq2seqGAN' className="link">Seq2Seq GAN</Link> and its variant</b></i></p>
-                <div style={{textAlign: 'center'}}><img src={GAN1} class='model'></img><p>Figure 1. Generator of Seq2Seq GAN Model-1</p></div>
-                <div style={{textAlign: 'center'}}><img src={GAN2}/><p>Figure 2. Discriminator of Seq2Seq GAN Model</p></div>
+                <div style={{textAlign: 'center'}}><img src={GAN1} class='ganmodel'></img><p>Figure 1. Generator of Seq2Seq GAN Model-1</p></div>
+                <div style={{textAlign: 'center'}}><img src={GAN2} class='ganmodel'/><p>Figure 2. Discriminator of Seq2Seq GAN Model</p></div>
                 <p>To the baseline LSTM model, we added the GAN and created a new model. We call this as <b>Seq2Seq GAN</b> here. In this model, the generator generates the next 50 moves based on the past 11 positions and the discriminator determines whether it’s real or fake. We expected that this structure can avoid the blurry prediction and make more accurate predictions.</p>
                 <p>To improve Seq2Seq GAN Model-1, we incorporated the past yaw information as well and made a Seq2Seq GAN Model-2.</p>
-                <div style={{textAlign: 'center'}}><img src={GAN3}/><p>Figure 3. Generator of Seq2Seq GAN Model-2 (with yaw information)</p></div>
+                <div style={{textAlign: 'center'}}><img src={GAN3} class='ganmodel'/><p>Figure 3. Generator of Seq2Seq GAN Model-2 (with yaw information)</p></div>
                 <p>As you see the Table 1, compared to the Seq2Seq GAN Model-1, the Seq2Seq GAN Model-2 was improved in the sense of test loss under the same conditions.</p>
                 <br></br>
                 <table style={{width: '30%'}}>
