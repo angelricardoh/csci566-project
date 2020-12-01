@@ -6,7 +6,7 @@ import SLSTM0 from './images/SLSTM0.png'
 import SLSTM1 from './images/SLSTM1.png'
 import SLSTM2 from './images/SLSTM2.png'
 import SLSTM3 from './images/SLSTM3.png'
-
+import "./MainContainer.css";
 
 function MainContainer(props) {
     return (

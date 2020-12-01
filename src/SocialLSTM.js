@@ -1,14 +1,14 @@
 import React from "react";
-import "./VAELSTM.css";
+import "./SocialLSTM.css";
 
-function VAELSTM(props) {
+function SocialLSTM(props) {
     return (
         <div id='outer_container'>
             <div id='container'>
-                {"Detailed information of VAELSTM"}
+                Detailed information of SocialLSTM
             </div>
         </div>
     )
 }
 
-export default VAELSTM;
+export default SocialLSTM;

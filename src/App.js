@@ -8,6 +8,8 @@ import ResnetGNU from './ResnetGNU';
 import Seq2Seq from './Seq2Seq';
 import LSTM from './LSTM';
 import VAELSTM from './VAELSTM';
+import Seq2SeqGAN from './Seq2SeqGAN';
+import SocialLSTM from './SocialLSTM';
 
 function App() {
     return (
@@ -24,15 +26,23 @@ function App() {
             />
             <Route exact
                     path="/lstm"
-                    component={() => <Seq2Seq key='lstm' page='lstm'/>}
+                    component={() => <LSTM key='lstm' page='lstm'/>}
             />
             <Route exact
                     path="/seq2seq"
-                    component={() => <LSTM key='seq2seq' page='seq2seq'/>}
+                    component={() => <Seq2Seq key='seq2seq' page='seq2seq'/>}
             />
             <Route exact
                     path="/vae-lstm"
                     component={() => <VAELSTM key='vae-lstm' page='vae-lstm'/>}
+            />
+            <Route exact
+                    path="/seq2seqGAN"
+                    component={() => <Seq2SeqGAN key='seq2seqGAN' page='seq2seqGAN'/>}
+            />
+            <Route exact
+                    path="/s-lstm"
+                    component={() => <SocialLSTM LSTM key='s-lstm' page='s-lstm'/>}
             />
             <Redirect from="/" to="/home" />
             </Switch>

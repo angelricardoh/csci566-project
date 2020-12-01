@@ -1,14 +1,14 @@
 import React from "react";
-import "./VAELSTM.css";
+import "./Seq2SeqGAN.css";
 
-function VAELSTM(props) {
+function Seq2SeqGAN(props) {
     return (
         <div id='outer_container'>
             <div id='container'>
-                {"Detailed information of VAELSTM"}
+                Detailed information of Seq2SeqGAN
             </div>
         </div>
     )
 }
 
-export default VAELSTM;
+export default Seq2SeqGAN;

@@ -1,0 +1,30 @@
+img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+table {
+    margin: 0 auto;
+    margin-bottom: 20pt;
+  }
+  
+table, th, td {
+text-align: center;
+border: 1px solid black;
+padding-bottom: 5pt;
+}
+  
+#motivation_pic {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+}
+
+#more_motivation_pics_div {
+display: block;
+text-align: center;
+padding-top: 10pt;
+}
