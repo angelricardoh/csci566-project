@@ -1,3 +1,51 @@
+# Running blog locally
+
+## Prerequisites
+
+1. An adequate version of [`Node.js`](https://nodejs.org/) is installed. Here's the adequate version I use:
+
+    ```sh
+    $ node --version
+    v6.10.1
+    ```
+
+2. An adequate version of  [`npm`](https://nodejs.org/) is installed. Here's the adequate version I use:
+
+    ```sh
+    $ npm --version
+    3.10.10
+    ```
+    
+## Instructions
+
+In the terminal run the following command to install all dependencies
+
+    ```sh
+    $ npm install
+    ```
+
+After that run the following command to execute a server that displays our React application
+
+    ```sh
+    $ npm start
+    ```
+    
+Next, you should be able to see something like this in your terminal
+
+    ```sh
+    $ Compiled successfully!
+
+    You can now view csci566-project in the browser.
+
+      Local:            http://localhost:3000/csci566-project
+      On Your Network:  http://192.168.0.101:3000/csci566-project
+
+    Note that the development build is not optimized.
+    To create a production build, use npm run build.
+    ```
+
+Follow the url to visualize the home page
+
 # Deploying a React App* to GitHub Pages
 
 \* created using `create-react-app`
