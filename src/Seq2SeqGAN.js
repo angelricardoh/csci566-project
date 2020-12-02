@@ -1,11 +1,6 @@
 import React from "react";
 import BaseComponent from './BaseComponent'
 import "./Seq2SeqGAN.css";
-import GAN1 from './images/main/GAN1.png'
-import GAN2 from './images/main/GAN2.png'
-import GAN3 from './images/main/GAN3.png'
-import GAN4 from './images/main/GAN4.png'
-import GAN5 from './images/main/GAN5.png'
 
 export default class Seq2SeqGAN extends BaseComponent {
     render() {
