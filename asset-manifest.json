@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/csci566-project/static/css/main.845b65f6.chunk.css",
-    "main.js": "/csci566-project/static/js/main.cbe36a0d.chunk.js",
-    "main.js.map": "/csci566-project/static/js/main.cbe36a0d.chunk.js.map",
+    "main.js": "/csci566-project/static/js/main.673f4aae.chunk.js",
+    "main.js.map": "/csci566-project/static/js/main.673f4aae.chunk.js.map",
     "runtime-main.js": "/csci566-project/static/js/runtime-main.09af2b4e.js",
     "runtime-main.js.map": "/csci566-project/static/js/runtime-main.09af2b4e.js.map",
     "static/css/2.1a02f21c.chunk.css": "/csci566-project/static/css/2.1a02f21c.chunk.css",
@@ -64,13 +64,14 @@
     "static/media/vae8.750d2809.png": "/csci566-project/static/media/vae8.750d2809.png",
     "static/media/vae9.02e156ca.png": "/csci566-project/static/media/vae9.02e156ca.png",
     "static/media/vaea.667bf8ac.png": "/csci566-project/static/media/vaea.667bf8ac.png",
-    "static/media/vaeb.04767882.png": "/csci566-project/static/media/vaeb.04767882.png"
+    "static/media/vaeb.04767882.png": "/csci566-project/static/media/vaeb.04767882.png",
+    "static/media/vaec.5c7b7c39.png": "/csci566-project/static/media/vaec.5c7b7c39.png"
   },
   "entrypoints": [
     "static/js/runtime-main.09af2b4e.js",
     "static/css/2.1a02f21c.chunk.css",
     "static/js/2.a7fbcced.chunk.js",
     "static/css/main.845b65f6.chunk.css",
-    "static/js/main.cbe36a0d.chunk.js"
+    "static/js/main.673f4aae.chunk.js"
   ]
 }
