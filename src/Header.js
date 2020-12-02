@@ -42,7 +42,7 @@ class Header extends Component {
                                 eventKey='2'
                                 as={RouterNavLink}
                                 to="/lstm-seq2seq">
-                                LSTM
+                                LSTM+Seq2Seq
                             </Nav.Link>
                             <Nav.Link
                                 eventKey='3'
