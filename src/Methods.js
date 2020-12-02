@@ -25,7 +25,7 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
             <p>To improve Seq2Seq GAN1, we incorporated the past yaw information as well and made a Seq2Seq GAN2.</p>
             <figure style={{textAlign: 'center'}}><img src={GAN3} class='ganmodel'/><figcaption>Figure 3. Generator of Seq2Seq GAN2 (with yaw information)</figcaption></figure>
             <p>As you see in Table 1, compared to the Seq2Seq GAN1, the Seq2Seq GAN2 achieved a lower test loss under the same conditions.</p>
-            <table style={{width: '500pt', tableLayout: 'fixed'}}>
+            <table style={{width:'90%', tableLayout: 'fixed'}}>
                 <caption>Table 1. Test Losses of different Seq2Seq GAN Models</caption>
                 <tr>
                     <td>Models</td>
@@ -44,7 +44,7 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
                 </tr>
             </table>
             <p>After training, we tested our Seq2Seq model to check if it doesn’t fall into the mode failure and it can generate diverse predictions for the inputs. We generated one hundred sample predictions for the same batch(32) input and plotted all these generated future trajectories for the randomly-picked four inputs.</p>                
-            <figure style={{textAlign: 'center'}}><img src={GAN5}/><figcaption>Figure 4. Predicted Trajectories from the Seq2Seq GAN Model</figcaption></figure>
+            <figure style={{textAlign: 'center'}}><img style={{maxWidth:'80%'}} src={GAN5}/><figcaption>Figure 4. Predicted Trajectories from the Seq2Seq GAN Model</figcaption></figure>
             <p>As you see in Figure 4, the Seq2Seq GAN model does not suffer from mode collapse and successfully generates diverse trajectories. <br></br>More detailed explanation about this Seq2Seq GAN model is available on the other tab above.</p>
             <br></br>
 

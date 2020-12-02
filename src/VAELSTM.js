@@ -3,7 +3,6 @@ import BaseComponent from './BaseComponent'
 import "./VAELSTM.css";
 import Figure from 'react-bootstrap/Figure'
 import vae1 from './images/vaelstm/vae1.png'
-import vaetable1 from './images/vaelstm/vaetable1.png'
 import vae2 from './images/vaelstm/vae2.png'
 import vae3 from './images/vaelstm/vae3.png'
 import vae4 from './images/vaelstm/vae4.png'
@@ -30,7 +29,7 @@ export default class VAELSTM extends BaseComponent {
 
                     <br></br>
                     <p>The following table shows the losses at evaluation time using MSE as criterion achieved after 10000 iterations, number of history positions was 10, predicted positions 50 and beta = 0.2 for VAE.</p>
-                    <table width={'90%'}>
+                    <table style={{width: '90%'}}>
                         <thead>
                             <tr>
                                 <th>Configuration</th>
