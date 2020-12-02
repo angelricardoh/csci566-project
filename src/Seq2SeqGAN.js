@@ -317,14 +317,14 @@ export default class Seq2SeqGAN extends BaseComponent {
                             </strong>
                         </caption>
                         <tr>
-                            <td width="10%" rowSpan='2'><b>Configuration</b></td>
-                            <td width="10%" rowSpan='2'><b>Optimizer</b></td>
-                            <td width="10%" rowSpan='2'><b>Batch Size</b></td>
+                            <td width="15%" rowSpan='2'><b>Configuration</b></td>
+                            <td width="9%" rowSpan='2'><b>Optimizer</b></td>
+                            <td width="9%" rowSpan='2'><b>Batch Size</b></td>
                             <td colspan="2"><b>Loss function</b></td>
                             <td colspan="2"><b>Layers in the Discriminator</b></td>
-                            <td width="10%" rowSpan='2'><b>Epoch</b></td>
-                            <td width="10%" rowSpan='2'><b>Learning rate</b></td>
-                            <td width="10%" rowSpan='2'><b>Test Loss(MSE)</b></td>        
+                            <td width="8%" rowSpan='2'><b>Epoch</b></td>
+                            <td width="9%" rowSpan='2'><b>Learning rate</b></td>
+                            <td width="9%" rowSpan='2'><b>Test Loss(MSE)</b></td>        
                         </tr>
                         <tr>
                             <th>Generator</th>
