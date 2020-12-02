@@ -1,11 +1,9 @@
 import React from 'react';
 import commentBox from 'commentbox.io';
-// import { commentsboxioProjectID } from "./Constants";
 
 export default class PageWithComments extends React.Component {
     componentDidMount() {
-        commentsboxioProjectID = ''
-        this.removeCommentBox = commentBox(commentsboxioProjectID, { defaultBoxId: this.props.articleId });
+        this.removeCommentBox = commentBox('5712513450639360-proj', { defaultBoxId: this.props.articleId });
     }
 
     componentWillUnmount() {

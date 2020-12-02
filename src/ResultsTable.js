@@ -4,62 +4,59 @@ import "./MainContainer.css";
 export default function ResultsTable() {
     return (
         <div>
-            <table>
+            <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                <caption>Table 2. Comparison on the test loss of our models</caption>
                 <tr>
                     <th><b>Method</b></th>
                     <th><b>Test loss</b></th>
                 </tr>
                 <tr>
-                    <td>LSTM - Positions</td>
-                    <td>2.257230417</td>
+                    <td>Seq2Seq LSTM - v2</td>
+                    <td>3.6188</td>
                 </tr>
                 <tr>
-                    <td>LSTM - Positions + BEV Image</td>
-                    <td>2.591220331</td>
+                    <td><b>Social LSTM-v2</b></td>
+                    <td><b>3.5578</b></td>
                 </tr>
                 <tr>
-                    <td>LSTM - Positions + Agent View + Road Images</td>
-                    <td>3.11691956</td>
+                    <td>LSTM - v2</td>
+                    <td>3.1169</td>
                 </tr>
                 <tr>
-                    <td>LSTM - All Available Data</td>
-                    <td>2.6480581797</td>
+                    <td>Seq2Seq LSTM - v1</td>
+                    <td>2.9981</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq LSTM - POS</td>
-                    <td>2.998081285</td>
+                    <td>Seq2Seq LSTM - v3</td>
+                    <td>2.2907</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq LSTM - CNN</td>
-                    <td>3.61865188</td>
-                </tr>
-                <tr>
-                    <td>VAE-LSTM Configuration A</td>
-                    <td>2.3270</td>
-                </tr>
-                <tr>
-                    <td>VAE-LSTM Configuration B</td>
-                    <td>2.2085</td>
-                </tr>
-                <tr>
-                    <td>Seq2Seq LSTM - Positions + Agent View + Road Images</td>
-                    <td>2.290573328</td>
-                </tr>
-                <tr>
-                    <td>Seq2SeqGAN Configuration V2</td>
-                    <td><b>1.9143</b></td>
-                </tr>
-                <tr>
-                    <td>Seq2SeqGAN Configuration V4-1</td>
-                    <td>2.1783</td>
-                </tr>
-                <tr>
-                    <td>Seq2SeqGAN Configuration V4-2</td>
+                    <td>Seq2SeqGAN2-v2-2</td>
                     <td>2.2576</td>
                 </tr>
                 <tr>
-                    <td>Social LSTM-v2</td>
-                    <td>3.55784371</td>
+                    <td>LSTM - v1</td>
+                    <td>2.2572</td>
+                </tr>
+                <tr>
+                    <td>Seq2Seq GAN2-v2-1</td>
+                    <td>2.1783</td>
+                </tr>
+                <tr>
+                    <td>VAE+LSTM A</td>
+                    <td>2.1587</td>
+                </tr>
+                <tr>
+                    <td>Seq2Seq GAN1-v2-2-1</td>
+                    <td>2.1463</td>
+                </tr>
+                <tr>
+                    <td>VAE+LSTM B</td>
+                    <td>1.9585</td>
+                </tr>
+                <tr>
+                    <td><b>Seq2Seq GAN1-v1</b></td>
+                    <td><b>1.9143</b></td>
                 </tr>
             </table>
         </div>

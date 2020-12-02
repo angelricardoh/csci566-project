@@ -2,11 +2,7 @@ import React from "react";
 import ResultsTable from './ResultsTable'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Image from 'react-bootstrap/Image'
 import Figure from 'react-bootstrap/Figure'
-import FigureImage from 'react-bootstrap/FigureImage'
-import FigureCaption from 'react-bootstrap/FigureCaption'
 import results1 from './images/main/results1.png'
 import results2 from './images/main/results2.png'
 import results3 from './images/main/results3.png'
@@ -42,30 +38,24 @@ export default function Results() {
             <p>We computed MSE test loss against the ground truth trajectories to compare our model’s performances. The following chart shows the average MSE test loss from our the most representative models:</p>
             <ResultsTable/>
 
-            <p>While Social LSTM was not the best performer, we believe in its potential and that our current architecture or even a slightly modified version can achieve a much lower loss, especially with more training. Moreover, due to computational constraints, our social LSTM does not differentiate different types of objects (i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories. This loss of information could prevent the model from achieving a better loss.
-Our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed extremely well, allowing our Seq2Seq GAN model to achieve the best test loss. </p>
-            <h2>Future Work</h2>
-            <p>Although we implemented various models and tried many different approaches with those models, we found some limitations on our models from our experiments and they still give us chances to enhance our models with future works.</p>
-            <p>For Seq2Seq GAN,  it didn’t consider
+            <p>It is clear that our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed very well, allowing our Seq2Seq GAN model to achieve the best test loss. </p>
+            <p>Here are some more analysis on the compared result:
                 <ul>
-                    <li>the road information therefore, the generated predictions can fall off the roads.</li>
-                    <li>the interaction with neighbors including other cars, pedestrians, or cyclists.</li>
+                    <li>While the LSTM and Seq2Seq based LSTM performed well, they were still outperformed by other models like Seq2Seq GAN</li>
+                    <li>VAE+LSTM average losses seem to be slightly better than other LSTM models, but not as good as other models like Seq2Seq GAN </li>
                 </ul>
             </p>
-        
-            <p>To complement these limitations and improve our Seq2Seq GAN Model, we can introduce the following methods in the future work.
+  
+            <p>From these observations, we can infer the followings:
                 <ul>
-                    <li>Training the model with optimal parameters and with more epochs.</li>
-                    <li>Combining with a CNN model including road information from images.</li>
-                    <li>Applying the concept of Social GAN which embraces interactions among neighbors.</li>
+                    <li>While testing with a basic recurrent model like LSTM was definitely a step in the right direction, it is clear that a more powerful recurrent model would be necessary to improve the loss.</li>
+                    <li>About the result of LSTM+VAE, we assume that this is because the model is creating in some cases more sharp trajectories since the model is not tuned or trained enough to output smooth trajectories for such scenarios. </li>
+                    <li>With the LSTM+VAE, while most trajectories are good approximations when compared to ground truth trajectories in general seem to be a little bit unnatural where Seq2SeqGAN model with the help of the discriminator seems to output more natural (real) future predictions. </li>
+                    <li>While Social LSTM was not the best performer, we believe in its potential and that our current architecture or even a slightly modified version can achieve a much lower loss,  especially with more training. Moreover, due to computational constraints, our social LSTM does not differentiate different types of objects (i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories. This loss of information could prevent the model from achieving a better loss.</li>
                 </ul>
             </p>
 
-            <p>For our Social LSTM, the current model does not 
-                <ul><li>differentiate different types of objects(i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories because of computational constraints.</li></ul>
-            </p>
-            <p>However, we believe that our Social LSTM model can provide more precise predictions with much lower loss if we apply the former approach and train it with more epochs.  </p>
-            <p>One potential approach we had hoped to try was utilizing a transformer based network to compare its performance with other models. This dataset contains multiple facets of vehicle information like historical availability, various views like semantic, satellite, etc.  which can be utilized to get more precise predictions. </p>
+            <p>Overall, we are happy to report that all of our models perform significantly better than the provided Lyft baseline, with all presented models achieving over 3 times better performance.</p>
         </div>
     )
 }
