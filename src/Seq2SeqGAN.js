@@ -56,9 +56,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                         <p>
                             Other than the generator model we have discussed above, we have implemented a new generator that contains yaw information taking the direction information into our model. As in Figure3, the encoder takes history positions and yaw information as input. We believed that this would improve our model and found out that the Seq2Seq GAN2 has lower MSE test loss than the Seq2Seq GAN1.             
                         </p>
-
                <div>
-                <table>
                     <table style={{width: '300pt', tableLayout: 'fixed'}}>
                         <caption>Table 1. Test Losses of different Seq2Seq GAN Models </caption>
                         <tr>
@@ -76,8 +74,8 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <td>2</td>
                             <td>2576</td>
                         </tr>
-                </table>
-               </div>
+                    </table>
+                </div>
               </div>
            </div>
         )
