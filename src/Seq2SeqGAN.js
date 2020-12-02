@@ -6,6 +6,8 @@ import GAN2 from './images/main/GAN2.png'
 import GAN3 from './images/main/GAN3.png'
 import GAN4 from './images/main/GAN4.png'
 import GAN5 from './images/main/GAN5.png'
+import GAN6 from './images/main/GAN6.png'
+import GAN7 from './images/main/GAN7.png'
 
 export default class Seq2SeqGAN extends BaseComponent {
     render() {
@@ -212,6 +214,73 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </p>
                 <p>
                     With this success, we applied another change on the optimizer to see that the generator can learn better with this change. We’re currently using Adam in the generator and the discriminator as optimizers. To prevent the discriminator from learning too fast which might affect the generator’s performance, we applied different values of learning rate on the optimizer in the discriminator and saw the result. The other conditions for all the models in the Table 5 are the same - epoch of 1, MSE loss function for the generators. 
+                </p>
+               <div>
+                <table>
+                    <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                        <caption>Table 5. Test Loss on Seq2Seq GAN models with different learning rate </caption>
+                        <tr>
+                            <th><b>Configuration</b></th>
+                            <th><b>Learning rate in the discriminator</b></th>
+                            <th><b>Test Loss(MSE)</b></th>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN1-v2-2-1</td>
+                            <td>5e-3</td>
+                            <td>2.5574</td>
+                        </tr>
+
+                        <tr>
+                            <td>Seq2Seq GAN1-v2-2-1</td>
+                            <td>1e-3</td>
+                            <td>2.5579</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN1-v2-2-1</td>
+                            <td>1e-4</td>
+                            <td>2.1463</td>
+                        </tr>
+                </table>
+               </div>
+                <p>
+                    As in Table 5, we could get the lowest test MSE loss when we trained the discriminator with learning rate, 1e-4. 
+                </p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={GAN6}/>
+                    <span>
+                        <strong> 
+                            Figure 5. Training loss graphs with learning rate 1e-4. 
+                        </strong> 
+                    </span>
+                </div>
+                <p>
+                    From the graph above, we can observe that  the discriminator loss in Figure 5 converges to 0 slower than Figure 4. It shows that when the learning rate is smaller, the optimizer has more gradient to update weights, which helps the model to enhance its performance.                                
+                </p>
+                <h4>Evaluation on Seq2Seq models</h4>
+                <p>
+                    After training, we tested our Seq2Seq models to check if it doesn’t fall into the mode failure and it can generate diverse predictions for the inputs. We generated one hundred sample predictions for the same batch(32) input and plotted all these generated future trajectories(100) for the randomly-picked four inputs. 
+                </p>
+                <div style={{textAlign: 'center'}}>
+                    <img src={GAN5}/>
+                    <span>
+                        <strong> 
+                            Figure 6. Predicted Trajectories from the Seq2Seq GAN Model1
+                        </strong> 
+                    </span>
+                </div>
+                <div style={{textAlign: 'center'}}>
+                    <img src={GAN7}/>
+                    <span>
+                        <strong> 
+                            Figure 7. Predicted Trajectories from the Seq2Seq GAN Model2 (with yaw information)
+                        </strong> 
+                    </span>
+                </div>
+                <p>
+                    As you see in Figure 6 and 7, both Seq2Seq GAN1 and Seq2Seq GAN1 do not suffer from mode collapse and successfully generates diverse trajectories.                
+                </p>                 
+                <p>
+                    You can find all the variants of Seq2Seq GAN with detailed hyper parameters and the structures in Table 6. 
                 </p>
 
               </div>
