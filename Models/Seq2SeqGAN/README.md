@@ -12,6 +12,7 @@ As you see the generator’s architecture in Figure1, we firstly extracted laten
 Other than the generator model we have discussed above, we have implemented a new generator that contains yaw information taking the direction information into our model. As in Figure3, the encoder takes history positions and yaw information as input. We believed that this would improve our model and found out that the Seq2Seq GAN2 has lower MSE test loss than the Seq2Seq GAN1.
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/main/GAN9.png)
+<img src="https://github.com/deepnewworld/csci566-project/blob/master/src/images/main/GAN9.png" width="50%">
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/main/GAN4.png)
 
