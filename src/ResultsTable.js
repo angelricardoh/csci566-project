@@ -31,7 +31,7 @@ export default function ResultsTable() {
                     <td>2.2907</td>
                 </tr>
                 <tr>
-                    <td>Seq2SeqGAN2-v2-2</td>
+                    <td>Seq2Seq GAN2-v2-1-1</td>
                     <td>2.2576</td>
                 </tr>
                 <tr>
@@ -39,15 +39,15 @@ export default function ResultsTable() {
                     <td>2.2572</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq GAN2-v2-1</td>
-                    <td>2.1783</td>
+                    <td>Seq2Seq GAN2-v2-2-1</td>
+                    <td>2.1781</td>
                 </tr>
                 <tr>
                     <td>VAE+LSTM A</td>
                     <td>2.1587</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq GAN1-v2-2-1</td>
+                    <td>Seq2Seq GAN1-v2-2-3</td>
                     <td>2.1463</td>
                 </tr>
                 <tr>
@@ -55,7 +55,7 @@ export default function ResultsTable() {
                     <td>1.9585</td>
                 </tr>
                 <tr>
-                    <td><b>Seq2Seq GAN1-v1</b></td>
+                    <td><b>Seq2Seq GAN1-v2-1-1</b></td>
                     <td><b>1.9143</b></td>
                 </tr>
             </table>

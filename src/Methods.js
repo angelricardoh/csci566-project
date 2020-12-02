@@ -33,14 +33,14 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
                     <td>Test Loss(MSE)</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq GAN1</td>
+                    <td>Seq2Seq GAN1-v2-1-1</td>
                     <td>1</td>
                     <td>2.6551</td>
                 </tr>
                 <tr>
-                    <td>Seq2Seq GAN2</td>
-                    <td>1</td>
-                    <td>2.2576</td>
+                    <td><b>Seq2Seq GAN2-v2-1-1</b></td>
+                    <td><b>1</b></td>
+                    <td><b>2.2576</b></td>
                 </tr>
             </table>
             <p>After training, we tested our Seq2Seq model to check if it doesn’t fall into the mode failure and it can generate diverse predictions for the inputs. We generated one hundred sample predictions for the same batch(32) input and plotted all these generated future trajectories for the randomly-picked four inputs.</p>                
@@ -51,7 +51,7 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
             <p><i><b><Link to='/s-lstm' className="link">Social LSTM</Link> and its variant</b></i></p>
             <figure style={{textAlign: 'center'}}>
                 <img src={SLSTM1} class='model'/>
-                <figcaption>Fig 5. Social LSTM method</figcaption>
+                <figcaption>Figure 5. Social LSTM method</figcaption>
             </figure>
 
             <p>-Based on Alexandre etc’s research, we tried to take the neighbor’s effect into consideration combining with the LSTM model. For this, we added a max-pooling layer between each time stamp, its formulation is:</p>
@@ -71,7 +71,7 @@ Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link t
                 </ul>
                 As a result of the modifications, we created a Social LSTM variant model as Figure 6.
             </p>
-            <figure style={{textAlign: 'center'}}><img src={SLSTM2} class='model'/><figcaption>Fig 6. Social-LSTM variant</figcaption></figure>
+            <figure style={{textAlign: 'center'}}><img src={SLSTM2} class='model'/><figcaption>Figure 6. Social-LSTM variant</figcaption></figure>
             <p>For this model, we slightly changed our goal from directly predicting the future trajectory to maximizing the probability of prediction and returning the one with the highest probability. The objective function is:</p>
             <div style={{textAlign: 'center'}}>
                 <img src={SLSTM3} class='formula'/>
