@@ -38,19 +38,19 @@ export default function Results() {
             <p>We computed MSE test loss against the ground truth trajectories to compare our model’s performances. The following chart shows the average MSE test loss from our the most representative models:</p>
             <ResultsTable/>
 
-            <p>It is clear that our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed very well, allowing our Seq2Seq GAN model to achieve the best test loss. </p>
+            <p>It is clear that our Seq2Seq Gan architecture achieved the best performance, performing more than 6x better than the baseline model. While the Seq2Seq architecture is often used for text translations, we were interested to see its performance in the trajectory prediction domain. To our surprise, Seq2Seq performed very well, allowing our Seq2Seq GAN model to achieve the best test loss.</p>
             <p>Here are some more analysis on the compared result:
                 <ul>
-                    <li>While the LSTM and Seq2Seq based LSTM performed well, they were still outperformed by other models like Seq2Seq GAN</li>
-                    <li>VAE+LSTM average losses seem to be slightly better than other LSTM models, but not as good as other models like Seq2Seq GAN </li>
+                    <li>While the LSTM and Seq2Seq based LSTM performed well, they were still outperformed by other models like Seq2Seq GAN.</li>
+                    <li>VAE+LSTM average losses seem to be slightly better than other LSTM models, but not as good as other models like Seq2Seq GAN.</li>
                 </ul>
             </p>
   
             <p>From these observations, we can infer the followings:
                 <ul>
                     <li>While testing with a basic recurrent model like LSTM was definitely a step in the right direction, it is clear that a more powerful recurrent model would be necessary to improve the loss.</li>
-                    <li>About the result of LSTM+VAE, we assume that this is because the model is creating in some cases more sharp trajectories since the model is not tuned or trained enough to output smooth trajectories for such scenarios. </li>
-                    <li>With the LSTM+VAE, while most trajectories are good approximations when compared to ground truth trajectories in general seem to be a little bit unnatural where Seq2SeqGAN model with the help of the discriminator seems to output more natural (real) future predictions. </li>
+                    <li>About the result of LSTM+VAE, we assume that this is because the model is creating in some cases more sharp trajectories since the model is not tuned or trained enough to output smooth trajectories for such scenarios.</li>
+                    <li>With the LSTM+VAE, while most trajectories are good approximations when compared to ground truth trajectories in general seem to be a little bit unnatural where Seq2SeqGAN model with the help of the discriminator seems to output more natural (real) future predictions.</li>
                     <li>While Social LSTM was not the best performer, we believe in its potential and that our current architecture or even a slightly modified version can achieve a much lower loss,  especially with more training. Moreover, due to computational constraints, our social LSTM does not differentiate different types of objects (i.e. Car, Cyclist, Pedestrian) when attempting to compute their trajectories. This loss of information could prevent the model from achieving a better loss.</li>
                 </ul>
             </p>

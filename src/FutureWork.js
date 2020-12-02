@@ -6,7 +6,7 @@ export default function FutureWork() {
         <div>
             <h2>Future Work</h2>
             <p>Although we implemented various models and tried many different approaches with those models, we found some limitations on our models from our experiments and they still give us chances to enhance our models with future works.</p>
-            <p>For Seq2Seq GAN, it didn’t consider
+            <p>For Seq2Seq GAN,  it didn’t consider
                 <ul>
                     <li>the road information therefore, the generated predictions can fall off the roads.</li>
                     <li>the interaction with neighbors including other cars, pedestrians, or cyclists.</li>
