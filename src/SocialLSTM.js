@@ -21,12 +21,7 @@ export default class SocialLSTM extends BaseComponent {
                             Alexandre, Kratarth, et. al. pointed out that humans have the innate ability to  “read” one another. Any autonomous vehicle navigating such a scene should be able to foresee the future positions of people (including vehicles driven by other people or pedestrians) and accordingly adjust its path to avoid collisions. Inspired by this paper, we want to take the “neighbor's” influence into consideration. For this project, we have one LSTM for each vehicle. This LSTM learns the spatial coordination and predicts their future positions as shown in the Figure 1.
                         </p>
                         <div style= {{textAlign: 'center'}}>
-                            <img src={SLSTM1}/>
-                            <span>
-                                <strong>
-                                    Figure 1. Social LSTM Model Architecture
-                                </strong>
-                            </span>
+                            <Figure><Figure.Image class='slstm1' src={SLSTM1}/><Figure.Caption>Figure 1. Social LSTM Model Architecture</Figure.Caption></Figure>
                         </div>
                         
                         <p>
@@ -35,12 +30,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img src={SLSTM0}/>
-                            <span>
-                                <strong>
-                                    Equation 1. Social Pooling Layer equation  
-                                </strong>
-                            </span>
+                            <Figure><Figure.Image class='slstm0' src={SLSTM0}/><Figure.Caption>Equation 1. Social Pooling Layer Equation</Figure.Caption></Figure>
                         </div>
         
                         <p>
@@ -48,7 +38,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img src={slstmcode}/>
+                            <Figure><Figure.Image class='slstmcode' src={slstmcode}/></Figure>
                         </div>
         
                         <p>
@@ -73,12 +63,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img src={SLSTM2}/>
-                            <span>
-                                <strong>
-                                    Figure 2. Social LSTM variant Model Architecture
-                                </strong>
-                            </span>
+                            <Figure><Figure.Image class='slstm2' src={SLSTM2}/><Figure.Caption>Figure 2. Social LSTM Variant Model Architecture</Figure.Caption></Figure>
                         </div>
         
         
@@ -88,7 +73,7 @@ export default class SocialLSTM extends BaseComponent {
         
         
                         <div style= {{textAlign: 'center'}}>
-                            <img src={SLSTM3}/>
+                            <Figure><Figure.Image class='slstm3' src={SLSTM3}/></Figure>
                         </div>
         
                         <p>For this model, since we predict the probability, we want to minimize the negative log likelihood. But in order to be comparable with other models, here we calculated the MSE loss.
@@ -97,12 +82,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img src={slstmtrainloss}/>
-                            <span>
-                                <strong>
-                                    Figure 3. Training Loss for social LSTM and its variant
-                                </strong>
-                            </span>
+                            <Figure><Figure.Image class='slstmtrainloss' src={slstmtrainloss}/><Figure.Caption>Figure 3. Training Loss for Social LSTM and its Variant</Figure.Caption></Figure>
                         </div>
         
                         
@@ -124,12 +104,7 @@ export default class SocialLSTM extends BaseComponent {
         
                         
                         <div style= {{textAlign: 'center'}}>
-                            <img src={slstmtestloss}/>
-                            <span>
-                                <strong>
-                                    Figure 4. Testing Loss for social LSTM variant
-                                </strong>
-                            </span>
+                            <Figure><Figure.Image class='slstmtestloss' src={slstmtestloss}/><Figure.Caption>Figure 4. Test Loss for Social LSTM Variant</Figure.Caption></Figure>
                         </div>
         
                         <p>
