@@ -25,6 +25,7 @@ export default class Seq2SeqGAN extends BaseComponent {
             
                         <div style={{textAlign: 'center'}}>
                             <img src={GAN1} style = {{maxWidth:'100%'}}/>
+                            <br/>
                             <span>
                                 <strong> 
                                     Figure 1. Generator of Seq2Seq GAN1 
