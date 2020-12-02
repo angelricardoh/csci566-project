@@ -8,7 +8,8 @@ The Lyft l5kit dataset includes over 1000 hours of agent information. Given agen
 <img src="src/gifs/Semantic/ComingToStop.gif" />
 
 <img src="src/gifs/Semantic/FastTraffic.gif" />
-
+</div>
+<div style="display: flex; justify-content: space-around;">
 <img src="src/gifs/Semantic/Freeway_Semantic.gif" />
 
 <img src="src/gifs/Semantic/Waiting.gif" />
@@ -18,6 +19,9 @@ The Lyft l5kit dataset includes over 1000 hours of agent information. Given agen
 <div style="display: flex; justify-content: space-around;">
 <img src="src/gifs/Satellite/Fast.gif" />
 <img src="src/gifs/Satellite/Stop2.gif" />
+</div>    
+<div style="display: flex; justify-content: space-around;">
+
 <img src="src/gifs/Satellite/StopThenTurn.gif" />
 <img src="src/gifs/Satellite/Turning.gif" />
 </div>
