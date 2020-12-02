@@ -11,13 +11,7 @@ As you see the generator’s architecture in Figure1, we firstly extracted laten
 
 Other than the generator model we have discussed above, we have implemented a new generator that contains yaw information taking the direction information into our model. As in Figure3, the encoder takes history positions and yaw information as input. We believed that this would improve our model and found out that the Seq2Seq GAN2 has lower MSE test loss than the Seq2Seq GAN1.
 
-<center>
-|      Models      | Epochs | Test Loss(MSE) |
-|:----------------:|:------:|:--------------:|
-| Seq2Seq GANl1-v2 |    1   |     2.6551     |
-| Seq2Seq GANl2-v2 |    2   |     2.2576     |
-  Table1. 
-</center>
+![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/main/GAN9.png)
 
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/main/GAN4.png)
 
@@ -25,17 +19,15 @@ These are the loss graphs from a Seq2Seq GAN model. In this model, we have used 
 
 You can find all the variants of Seq2Seq GAN with detailed hyper parameters and the structures in the following table.
 ![](https://github.com/deepnewworld/csci566-project/blob/master/src/images/main/GAN8.png)
-<center>
-  Table2.
-</center>
-1 : Train with only history positions
-2 : Train with history positions and history yaw
-V1 : BCE loss function in the generator
-V2 : MSE loss function in the generator
-Vx - 1 : Relu, without Dropout and Batch Norm in the discriminator
-Vx - 2 : LeakyRelu, with Dropout and Batch Norm in the discriminator
-Vx - x - 1 : With learning rate 1e-3
-Vx - x - 2 : With learning rate 5e-3
-Vx - x - 3 : With learning rate 1e-4
+
+1 : Train with only history positions         
+2 : Train with history positions and history yaw        
+V1 : BCE loss function in the generator     
+V2 : MSE loss function in the generator         
+Vx - 1 : Relu, without Dropout and Batch Norm in the discriminator         
+Vx - 2 : LeakyRelu, with Dropout and Batch Norm in the discriminator         
+Vx - x - 1 : With learning rate 1e-3       
+Vx - x - 2 : With learning rate 5e-3         
+Vx - x - 3 : With learning rate 1e-4          
 
 You can see more details about Seq2Seq GAN [here](https://deepnewworld.github.io/csci566-project/#/seq2seqGAN).
