@@ -2,13 +2,13 @@ import React from "react";
 import BaseComponent from './BaseComponent'
 import "./SocialLSTM.css";
 
-import slstm1 from './images/main/SLSTM1.png'
-import slstmequ from './images/main/SLSTM0.png'
+import SLSTM1 from './images/main/SLSTM1.png'
+import SLSTM0 from './images/main/SLSTM0.png'
 import slstmcode from './images/main/slstmcode.png'
-import slstm2 from './images/main/SLSTM2.png'
-import slstmequ2 from './images/main/SLSTM3.png'
-import result1 from './images/main/slstmtrainloss.png'
-import result2 from './images/main/slstmtestloss.png'
+import SLSTM2 from './images/main/SLSTM2.png'
+import SLSTM3 from './images/main/SLSTM3.png'
+import slstmtrainloss from './images/main/slstmtrainloss.png'
+import slstmtestloss from './images/main/slstmtestloss.png'
 
 
 export default class SocialLSTM extends BaseComponent {
@@ -21,7 +21,7 @@ export default class SocialLSTM extends BaseComponent {
                             Alexandre, Kratarth, et. al. pointed out that humans have the innate ability to  “read” one another. Any autonomous vehicle navigating such a scene should be able to foresee the future positions of people (including vehicles driven by other people or pedestrians) and accordingly adjust its path to avoid collisions. Inspired by this paper, we want to take the “neighbor's” influence into consideration. For this project, we have one LSTM for each vehicle. This LSTM learns the spatial coordination and predicts their future positions as shown in the Figure 1.
                         </p>
                         <div style= {{textAlign: 'center'}}>
-                            <img scr={slstm1}/>
+                            <img scr={SLSTM1}/>
                             <span>
                                 <strong>
                                     Figure 1. Social LSTM Model Architecture
@@ -35,7 +35,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img scr={slstmequ}/>
+                            <img scr={SLSTM0}/>
                             <span>
                                 <strong>
                                     Equation 1. Social Pooling Layer equation  
@@ -73,7 +73,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img scr={slstm2}/>
+                            <img scr={SLSTM2}/>
                             <span>
                                 <strong>
                                     Figure 2. Social LSTM variant Model Architecture
@@ -88,7 +88,7 @@ export default class SocialLSTM extends BaseComponent {
         
         
                         <div style= {{textAlign: 'center'}}>
-                            <img scr={slstmequ2}/>
+                            <img scr={SLSTM3}/>
                         </div>
         
                         <p>For this model, since we predict the probability, we want to minimize the negative log likelihood. But in order to be comparable with other models, here we calculated the MSE loss.
@@ -97,7 +97,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         <div style= {{textAlign: 'center'}}>
-                            <img scr={result1}/>
+                            <img scr={slstmtrainloss}/>
                             <span>
                                 <strong>
                                     Figure 3. Training Loss for social LSTM and its variant
@@ -124,7 +124,7 @@ export default class SocialLSTM extends BaseComponent {
         
                         
                         <div style= {{textAlign: 'center'}}>
-                            <img scr={result2}/>
+                            <img scr={slstmtestloss}/>
                             <span>
                                 <strong>
                                     Figure 4. Testing Loss for social LSTM variant
