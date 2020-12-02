@@ -12,12 +12,6 @@ import result2 from './images/main/slstmtestloss.png'
 
 
 export default class SocialLSTM extends BaseComponent {
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({tex2jax: {inlineMath: [['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
     render() {
         return (
             <div id='outer_container'>
@@ -48,10 +42,6 @@ export default class SocialLSTM extends BaseComponent {
                                 </strong>
                             </span>
                         </div>
-        
-                        <p>
-                                        where \(h_{t-1}^j\) is the hidden state of the LSTM corresponding to \(j^{th}\) vehicle at time $t-1$. \(\mathcal{N}_i\) is the set of \(i^{th}\) vehicle's neighbor.
-                        </p>
         
                         <p>
                                             The pseudo code is shown in Algorithm 1:
