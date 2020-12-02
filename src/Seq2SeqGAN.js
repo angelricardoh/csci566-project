@@ -279,6 +279,42 @@ export default class Seq2SeqGAN extends BaseComponent {
                     You can find all the variants of Seq2Seq GAN with detailed hyper parameters and the structures in Table 6. 
                 </p>
 
+                <div>
+                    <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                        <caption>Table 6. All the models with tuning </caption>
+                        <tr>
+                            <th><b>Configuration</b></th>
+                            <th><b>Epochs</b></th>
+                            <th><b>Generator’s Loss function</b></th>                                
+                            <th><b>Test Loss(MSE)</b></th>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GANl1-v1</td>
+                            <td>1</td>
+                            <td>BCE</td>
+                            <td>78.5733</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GANl1-v2</td>
+                            <td>1</td>
+                            <td>MSE</td>
+                            <td>2.5441</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN2-v1</td>
+                            <td>1</td>
+                            <td>BCE</td>
+                            <td>78.55</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN2-v2</td>
+                            <td>1</td>
+                            <td>MSE</td>
+                            <td>2.2576</td>
+                        </tr>   
+                    </table>
+               </div>
+
               </div>
            </div>
         )
