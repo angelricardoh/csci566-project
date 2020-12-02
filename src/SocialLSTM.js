@@ -6,7 +6,7 @@ import slstm1 from './images/main/SLSTM1.png'
 import slstmequ from './images/main/SLSTM0.png'
 import slstmcode from './images/main/slstmcode.png'
 import slstm2 from './images/main/SLSTM2.png'
-import slsmequ2 from './images/main/SLSTM3.png'
+import slstmequ2 from './images/main/SLSTM3.png'
 import result1 from './images/main/slstmtrainloss.png'
 import result2 from './images/main/slstmtestloss.png'
 
