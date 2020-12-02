@@ -280,7 +280,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </p>
 
                 <div>
-                    <table style={{width: '900pt', tableLayout: 'fixed'}}>
+                    <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
                         <caption>Table 6. All the models with tuning </caption>
                         <tr>
                             <td width="10%" rowSpan='2'><b>Configuration</b></td>
