@@ -24,7 +24,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                         </p>
             
                         <div style={{textAlign: 'center'}}>
-                            <img src={GAN1} style = {{maxWidth:'100%'}}/>
+                            <img src={GAN1} style = {{maxWidth:'100%', width:'80%'}}/>
                             <br/>
                             <span>
                                 <strong> 
@@ -34,7 +34,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                         </div>
             
                         <div style={{textAlign: 'center'}}>
-                            <img src={GAN2} style = {{maxWidth:'100%'}}/>
+                            <img src={GAN2} style = {{maxWidth:'100%', width:'80%'}}/>
                             <br/>
                             <span>
                                 <strong> 
@@ -49,7 +49,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                         </p>
                 
                         <div style={{textAlign: 'center'}}>
-                            <img src={GAN3} style = {{maxWidth:'100%'}}/>
+                            <img src={GAN3} style = {{maxWidth:'100%', width:'80%'}}/>
                             <br/>
                             <span>
                                 <strong> 
