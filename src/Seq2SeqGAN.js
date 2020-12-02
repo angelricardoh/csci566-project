@@ -27,9 +27,9 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <img src={GAN1} style = {{maxWidth:'100%', width:'80%'}}/>
                             <br/>
                             <span>
-                                <strong> 
+                                <strong>
                                     Figure 1. Generator of Seq2Seq GAN1 
-                                </strong> 
+                                </strong>
                             </span>
                         </div>
             
@@ -37,11 +37,12 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <img src={GAN2} style = {{maxWidth:'100%', width:'80%'}}/>
                             <br/>
                             <span>
-                                <strong> 
+                                <strong>
                                     Figure 2. Discriminator of Seq2Seq GAN1 
-                                </strong> 
+                                </strong>
                             </span>
                         </div>
+                        <br/>
             
                         <p>
                             As you see the generator’s architecture in Figure1, we firstly extracted  latent temporal features from history positions with encoder and decoder. After that, we added noise vectors for the generator and used LSTM and fully connected layers to generate the next 50 trajectories. 
@@ -52,50 +53,55 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <img src={GAN3} style = {{maxWidth:'100%', width:'80%'}}/>
                             <br/>
                             <span>
-                                <strong> 
+                                <strong>
                                     Figure 3. Generator of Seq2Seq GAN2 (with yaw)
-                                </strong> 
+                                </strong>
                             </span>
                         </div>
-        
+                        <br/>
                         <p>
                             Other than the generator model we have discussed above, we have implemented a new generator that contains yaw information taking the direction information into our model. As in Figure3, the encoder takes history positions and yaw information as input. We believed that this would improve our model and found out that the Seq2Seq GAN2 has lower MSE test loss than the Seq2Seq GAN1.             
                         </p>
 
-               <div>
+                <div>
                     <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
-                        <caption>Table 1. Test Losses of different Seq2Seq GAN Models </caption>
+                        <caption>
+                            <strong>
+                                Table 1. Test Losses of different Seq2Seq GAN Models 
+                            </strong>
+                        </caption>
                         <tr>
-                            <th><b>Models</b></th>
-                            <th><b>Epochs</b></th>
+                            <th><b>Model</b></th>
+                            <th><b>Epoch</b></th>
                             <th><b>Test Loss(MSE)</b></th>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v2</td>
+                            <td>Seq2Seq GAN1-v2-1-1</td>
                             <td>1</td>
                             <td>2.6551</td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl2-v2</td>
-                            <td>2</td>
-                            <td>2.2576</td>
+                            <td><b>Seq2Seq GAN2-v2-1-1</b></td>
+                            <td><b>1</b></td>
+                            <td><b>2.2576</b></td>
                         </tr>
-                </table>
-
-               </div>
+                    </table>
+                </div>
+                <br/>
                 <div style={{textAlign: 'center'}}>
                     <img src={GAN4} style = {{maxWidth:'100%', width: '70%'}}/>
                     <br/>
                     <span>
-                        <strong> 
+                        <strong>
                             Figure 4.  Training loss graphs( lr = 1e-3 )
-                        </strong> 
+                        </strong>
                     </span>
                 </div>
+                <br/>
                 <p>
                     These are the loss graphs from a Seq2Seq GAN model. In this model, we have used MSE loss for the generator loss and BCE loss for the discriminator. MSE loss function allows a model to learn directly from the target value. As you see from Figure 4, generator loss converges to 0. This is desirable since we use a generator to generate future trajectory. Moreover, validation loss follows similar behavior as training loss, and it shows that our model is not overfitted.                                
                 </p>
-                <h2>Fine Tuning</h2>
+                <h4>Fine Tuning</h4>
                 <p>
                     We have tested many different hyperparameters for fine tuning  to improve  two Seq2Seq GAN models above.
                     Firstly, we tested the Seq2Seq GAN1 with different epochs and we got the following result.
@@ -103,21 +109,25 @@ export default class Seq2SeqGAN extends BaseComponent {
 
                <div>
                     <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
-                        <caption>Table 2. Test Losses on Seq2Seq GAN1 with different epochs </caption>
+                        <caption>
+                            <strong>
+                                Table 2. Test Losses on Seq2Seq GAN1 with different epochs 
+                            </strong>        
+                        </caption>
                         <tr>
                             <th><b>Configuration</b></th>
-                            <th><b>Epochs</b></th>
+                            <th><b>Epoch</b></th>
                             <th><b>Test Loss(MSE)</b></th>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v2</td>
+                            <td>Seq2Seq GAN1-v2-1-1</td>
                             <td>1</td>
                             <td>2.6551</td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v2</td>
-                            <td>2</td>
-                            <td>1.9143</td>
+                            <td><b>Seq2Seq GAN1-v2-1-1</b></td>
+                            <td><b>2</b></td>
+                            <td><b>1.9143</b></td>
                         </tr>
                     </table>
                </div>
@@ -129,7 +139,11 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </p>
                <div>
                     <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
-                        <caption>Table 3. Test Losses on Seq2Seq GAN models with different Loss functions in the generator </caption>
+                        <caption>
+                            <strong>
+                                Table 3. Test Losses on Seq2Seq GAN models with different Loss functions in the generator 
+                            </strong>
+                        </caption>
                         <tr>
                             <th><b>Configuration</b></th>
                             <th><b>Epochs</b></th>
@@ -137,28 +151,28 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <th><b>Test Loss(MSE)</b></th>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v1</td>
+                            <td>Seq2Seq GAN1-v1-1</td>
                             <td>1</td>
                             <td>BCE</td>
                             <td>78.5733</td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v2</td>
-                            <td>1</td>
-                            <td>MSE</td>
-                            <td>2.5441</td>
+                            <td><b>Seq2Seq GAN1-v2-1-1</b></td>
+                            <td><b>1</b></td>
+                            <td><b>MSE</b></td>
+                            <td><b>2.6551</b></td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GAN2-v1</td>
+                            <td>Seq2Seq GAN2-v1-1</td>
                             <td>1</td>
                             <td>BCE</td>
-                            <td>78.55</td>
+                            <td>78.5536</td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GAN2-v2</td>
-                            <td>1</td>
-                            <td>MSE</td>
-                            <td>2.2576</td>
+                            <td><b>Seq2Seq GAN2-v2-1-1</b></td>
+                            <td><b>1</b></td>
+                            <td><b>MSE</b></td>
+                            <td><b>2.2576</b></td>
                         </tr>   
                     </table>
                </div>
@@ -170,43 +184,45 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </p>
                <div>
                     <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
-                        <caption>Table 4. Test Loss on Seq2Seq GAN models with different layers in the discriminators. </caption>
+                        <caption>
+                            <strong>
+                                Table 4. Test Loss on Seq2Seq GAN models with different layers in the discriminators. 
+                            </strong>
+                        </caption>
                         <tr>
-                            <td width="25%"><b>Configuration</b></td>
+                            <td width="25%" rowSpan='2'><b>Configuration</b></td>
                             <td colspan="2"><b>Layers in discriminator</b></td>
-                            <td width="25%"><b>Test Loss(MSE)</b></td>
+                            <td width="25%" rowSpan='2'><b>Test Loss(MSE)</b></td>
                         </tr>
                         <tr>
-                            <th></th>
                             <th><b>Activation Function</b></th>
-                            <th><b>Dropout, Batch Normalization</b></th>
-                            <th></th>                                
+                            <th><b>Dropout, Batch Norm</b></th>                  
                         </tr>
 
                         <tr>
-                            <td>Seq2Seq GANl1-v2-1</td>
+                            <td>Seq2Seq GANl1-v2-1-1</td>
                             <td>Relu</td>
                             <td>Not Applied</td>
-                            <td>72.6551</td>
+                            <td>2.6551</td>
                         </tr>
 
                         <tr>
-                            <td><b>Seq2Seq GANl1-v2-2</b></td>
+                            <td><b>Seq2Seq GANl1-v2-2-1</b></td>
                             <td><b>Leaky Relu</b></td>
                             <td><b>Applied</b></td>
                             <td><b>2.5579</b></td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GAN2-v2-1</td>
+                            <td>Seq2Seq GAN2-v2-1-1</td>
                             <td>Relu</td>
                             <td>Not Applied</td>
                             <td>2.2576</td>
                         </tr>
                         <tr>
-                            <td><b>Seq2Seq GAN2-v2-2</b></td>
+                            <td><b>Seq2Seq GAN2-v2-2-1</b></td>
                             <td><b>Leaky Relu</b></td>
                             <td><b>Applied</b></td>
-                            <td><b>2.1783</b></td>
+                            <td><b>2.1781</b></td>
                         </tr>
                     </table>
                </div>
@@ -218,7 +234,11 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </p>
                <div>
                     <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
-                        <caption>Table 5. Test Loss on Seq2Seq GAN models with different learning rate </caption>
+                        <caption>
+                            <strong>    
+                            Table 5. Test Loss on Seq2Seq GAN models with different learning rate 
+                            </strong>
+                        </caption>
                         <tr>
                             <th><b>Configuration</b></th>
                             <th><b>Learning rate in the discriminator</b></th>
@@ -226,19 +246,19 @@ export default class Seq2SeqGAN extends BaseComponent {
                         </tr>
                         <tr>
                             <td>Seq2Seq GAN1-v2-2-1</td>
-                            <td>5e-3</td>
-                            <td>2.5574</td>
-                        </tr>
-
-                        <tr>
-                            <td>Seq2Seq GAN1-v2-2-1</td>
                             <td>1e-3</td>
                             <td>2.5579</td>
                         </tr>
+
                         <tr>
-                            <td>Seq2Seq GAN1-v2-2-1</td>
-                            <td>1e-4</td>
-                            <td>2.1463</td>
+                            <td>Seq2Seq GAN1-v2-2-2</td>
+                            <td>5e-3</td>
+                            <td>2.5574</td>
+                        </tr>
+                        <tr>
+                            <td><b>Seq2Seq GAN1-v2-2-3</b></td>
+                            <td><b>1e-4</b></td>
+                            <td><b>2.1463</b></td>
                         </tr>
                     </table>
                </div>
@@ -249,11 +269,12 @@ export default class Seq2SeqGAN extends BaseComponent {
                     <img src={GAN6} style = {{maxWidth: '100%', width: '70%'}}/>
                     <br/>
                     <span>
-                        <strong> 
+                        <strong>
                             Figure 5. Training loss graphs with learning rate 1e-4. 
-                        </strong> 
+                        </strong>
                     </span>
                 </div>
+                <br/>
                 <p>
                     From the graph above, we can observe that  the discriminator loss in Figure 5 converges to 0 slower than Figure 4. It shows that when the learning rate is smaller, the optimizer has more gradient to update weights, which helps the model to enhance its performance.                                
                 </p>
@@ -265,20 +286,22 @@ export default class Seq2SeqGAN extends BaseComponent {
                     <img src={GAN5} style = {{maxWidth: '100%', width: '50%'}}/>
                     <br/>
                     <span>
-                        <strong> 
+                        <strong>
                             Figure 6. Predicted Trajectories from the Seq2Seq GAN Model1
-                        </strong> 
+                        </strong>
                     </span>
                 </div>
+                <br/>
                 <div style={{textAlign: 'center'}}>
                     <img src={GAN7} style = {{maxWidth: '100%', width: '50%'}}/>
                     <br/>
                     <span>
-                        <strong> 
+                        <strong>
                             Figure 7. Predicted Trajectories from the Seq2Seq GAN Model2 (with yaw information)
-                        </strong> 
+                        </strong>
                     </span>
                 </div>
+                <br/>
                 <p>
                     As you see in Figure 6 and 7, both Seq2Seq GAN1 and Seq2Seq GAN1 do not suffer from mode collapse and successfully generates diverse trajectories.                
                 </p>                 
@@ -288,7 +311,11 @@ export default class Seq2SeqGAN extends BaseComponent {
 
                 <div>
                     <table style={{maxWidth: '100%', tableLayout: 'fixed'}}>
-                        <caption>Table 6. All the models with tuning </caption>
+                        <caption>
+                            <strong>
+                                Table 6. All the models with tuning 
+                            </strong>
+                        </caption>
                         <tr>
                             <td width="10%" rowSpan='2'><b>Configuration</b></td>
                             <td width="10%" rowSpan='2'><b>Optimizer</b></td>
@@ -300,10 +327,10 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <td width="10%" rowSpan='2'><b>Test Loss(MSE)</b></td>        
                         </tr>
                         <tr>
-                            <td>Generator</td>
-                            <td>Discriminator</td>
-                            <td>Activation Function</td>
-                            <td>Dropout, Batch Norm</td>
+                            <th>Generator</th>
+                            <th>Discriminator</th>
+                            <th>Activation Function</th>
+                            <th>Dropout, Batch Norm</th>
 
                         </tr>
                         <tr>
@@ -363,7 +390,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <td>Leaky Relu</td>
                             <td>O</td>
                             <td>1</td>
-                            <td>1e-3</td>
+                            <td>5e-3</td>
                             <td>2.5574</td>
                         </tr>
                         <tr>
@@ -445,7 +472,9 @@ export default class Seq2SeqGAN extends BaseComponent {
                     <li>Applying the concept of Social GAN which embraces interactions among neighbors.</li>    
                 </p>                    
                 <p>With the above approaches, we believe that our Seq2Seq GAN model can generate more plausible and precise predictions on the multiple next moves. </p>
-
+                <p>You can find the code for Seq2Seq GAN 
+                    <a href="https://github.com/deepnewworld/csci566-project/tree/master/Models/Seq2SeqGAN"> here!</a>
+                </p>
               </div>
            </div>
         )
