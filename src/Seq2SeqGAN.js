@@ -280,43 +280,167 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </p>
 
                 <div>
-                    <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                    <table style={{width: '900pt', tableLayout: 'fixed'}}>
                         <caption>Table 6. All the models with tuning </caption>
                         <tr>
-                            <th><b>Configuration</b></th>
-                            <th><b>Epochs</b></th>
-                            <th><b>Generator’s Loss function</b></th>                                
-                            <th><b>Test Loss(MSE)</b></th>
+                            <td width="10%" rowSpan='2'><b>Configuration</b></td>
+                            <td width="10%" rowSpan='2'><b>Optimizer</b></td>
+                            <td width="10%" rowSpan='2'><b>Batch Size</b></td>
+                            <td colspan="2"><b>Loss function</b></td>
+                            <td colspan="2"><b>Layers in the Discriminator</b></td>
+                            <td width="10%" rowSpan='2'><b>Epoch</b></td>
+                            <td width="10%" rowSpan='2'><b>Learning rate</b></td>
+                            <td width="10%" rowSpan='2'><b>Test Loss(MSE)</b></td>        
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v1</td>
-                            <td>1</td>
+                            <td>Generator</td>
+                            <td>Discriminator</td>
+                            <td>Activation Function</td>
+                            <td>Dropout, Batch Norm</td>
+
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN1-v1-1</td>
+                            <td>Adam</td>
+                            <td>32</td>
                             <td>BCE</td>
+                            <td>BCE</td>
+                            <td>Relu</td>
+                            <td>X</td>
+                            <td>1</td>
+                            <td>1e-3</td>
                             <td>78.5733</td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GANl1-v2</td>
-                            <td>1</td>
-                            <td>MSE</td>
-                            <td>2.5441</td>
-                        </tr>
-                        <tr>
-                            <td>Seq2Seq GAN2-v1</td>
-                            <td>1</td>
+                            <td>Seq2Seq GAN2-v1-1</td>
+                            <td>Adam</td>
+                            <td>32</td>
                             <td>BCE</td>
-                            <td>78.55</td>
+                            <td>BCE</td>
+                            <td>Relu</td>
+                            <td>X</td>
+                            <td>1</td>
+                            <td>1e-3</td>
+                            <td>78.5536</td>
                         </tr>
                         <tr>
-                            <td>Seq2Seq GAN2-v2</td>
-                            <td>1</td>
+                            <td>Seq2Seq GAN1-v2-1-1</td>
+                            <td>Adam</td>
+                            <td>32</td>
                             <td>MSE</td>
+                            <td>BCE</td>
+                            <td>Relu</td>
+                            <td>X</td>
+                            <td>1</td>
+                            <td>1e-3</td>
+                            <td>2.6551</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN1-v2-2-1</td>
+                            <td>Adam</td>
+                            <td>32</td>
+                            <td>MSE</td>
+                            <td>BCE</td>
+                            <td>Leaky Relu</td>
+                            <td>O</td>
+                            <td>1</td>
+                            <td>1e-3</td>
+                            <td>2.5579</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN1-v2-2-2</td>
+                            <td>Adam</td>
+                            <td>32</td>
+                            <td>MSE</td>
+                            <td>BCE</td>
+                            <td>Leaky Relu</td>
+                            <td>O</td>
+                            <td>1</td>
+                            <td>1e-3</td>
+                            <td>2.5574</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN2-v2-1-1</td>
+                            <td>Adam</td>
+                            <td>32</td>
+                            <td>MSE</td>
+                            <td>BCE</td>
+                            <td>Relu</td>
+                            <td>X</td>
+                            <td>1</td>
+                            <td>1e-3</td>
                             <td>2.2576</td>
-                        </tr>   
+                        </tr>       
+                        <tr>
+                            <td>Seq2Seq GAN2-v2-2-1</td>
+                            <td>Adam</td>
+                            <td>32</td>
+                            <td>MSE</td>
+                            <td>BCE</td>
+                            <td>Leaky Relu</td>
+                            <td>O</td>
+                            <td>1</td>
+                            <td>1e-3</td>
+                            <td>2.1781</td>
+                        </tr>     
+                        <tr>
+                            <td>Seq2Seq GAN1-v2-2-3</td>
+                            <td>Adam</td>
+                            <td>32</td>
+                            <td>MSE</td>
+                            <td>BCE</td>
+                            <td>Leaky Relu</td>
+                            <td>O</td>
+                            <td>1</td>
+                            <td>1e-4</td>
+                            <td>2.1463</td>
+                        </tr>    
+                        <tr>
+                            <td><b>Seq2Seq GAN1-v2-1-1</b></td>
+                            <td><b>Adam</b></td>
+                            <td><b>32</b></td>
+                            <td><b>MSE</b></td>
+                            <td><b>BCE</b></td>
+                            <td><b>Relu</b></td>
+                            <td><b>X</b></td>
+                            <td><b>2</b></td>
+                            <td><b>1e-3</b></td>
+                            <td><b>1.9143</b></td>
+                        </tr>                                                   
                     </table>
                </div>
+                <p>
+                    1 : Train with only history positions<br/>
+                    2 : Train with history positions and history yaw <br/>
+                    V1 : BCE loss function in the generator<br/>
+                    V2 : MSE loss function in the generator<br/>
+                    Vx - 1 : Relu, without Dropout and Batch Norm in the discriminator<br/>
+                    Vx - 2 : LeakyRelu, with Dropout and Batch Norm in the discriminator<br/>
+                    Vx - x - 1 : With learning rate 1e-3<br/>
+                    Vx - x - 2 : With learning rate 5e-3<br/>
+                    Vx - x - 3 : With learning rate 1e-4<br/>
+                </p>
+                <p>
+                    For now, the best Seq2Seq GAN model is the one with epoch2. While this model achieved the lowest test loss with 1.9143, we believe that we can achieve much lower MSE test loss if we apply Relu, dropout, and the batch norm in the layers and apply the learning rate of 1e-4 to the optimizer in the discriminator.                     
+                </p>
+                <h4>Future Work </h4>
+                <p>Although we have implemented many variant models of Seq2Seq GAN, we found some following limitations and these still give us chances to enhance our models with future works.</p>
+                <p>It didn’t</p>
+                <p>
+                    <li>consider the road information therefore, the generated predictions can fall off the roads.</li>
+                    <li>consider the interaction with neighbors including other cars, pedestrians, or cyclists.</li>
+                    <li>have a chance to learn enough with more epochs because of time and computational limit </li>
+                </p>                    
+                <p>To complement these limitations and improve our Seq2Seq GAN Model, we can introduce the following methods in the future work.</p>
+                <p>
+                    <li>Training the model with optimal parameters and with more epochs. </li>    
+                    <li>Combining with a CNN model including road information from images.</li>    
+                    <li>Applying the concept of Social GAN which embraces interactions among neighbors.</li>    
+                </p>                    
+                <p>With the above approaches, we believe that our Seq2Seq GAN model can generate more plausible and precise predictions on the multiple next moves. </p>
 
               </div>
            </div>
         )
     }
-}
+    }
