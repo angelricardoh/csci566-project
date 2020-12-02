@@ -2,6 +2,7 @@ import React from "react";
 import BaseComponent from './BaseComponent'
 import "./SocialLSTM.css";
 
+import Figure from 'react-bootstrap/Figure'
 import SLSTM1 from './images/main/SLSTM1.png'
 import SLSTM0 from './images/main/SLSTM0.png'
 import slstmcode from './images/main/slstmcode.png'
