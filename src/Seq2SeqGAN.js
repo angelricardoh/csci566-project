@@ -89,7 +89,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                 </div>
                 <br/>
                 <div style={{textAlign: 'center'}}>
-                    <img src={GAN4} style = {{maxWidth:'100%', width: '70%'}}/>
+                    <img src={GAN4} style = {{maxWidth:'100%', width: '60%'}}/>
                     <br/>
                     <span>
                         <strong>
@@ -266,7 +266,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                     As in Table 5, we could get the lowest test MSE loss when we trained the discriminator with learning rate, 1e-4. 
                 </p>
                 <div style={{textAlign: 'center'}}>
-                    <img src={GAN6} style = {{maxWidth: '100%', width: '70%'}}/>
+                    <img src={GAN6} style = {{maxWidth: '100%', width: '60%'}}/>
                     <br/>
                     <span>
                         <strong>
