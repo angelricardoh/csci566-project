@@ -15,7 +15,7 @@ The Lyft l5kit dataset includes over 1000 hours of agent information. Given agen
 <img src="src/gifs/Semantic/Waiting.gif" />
 </div>
 
-# Satellite Map Examples
+## Satellite Map Examples
 <div align="center" style="display: flex; justify-content: space-around;">
 <img src="src/gifs/Satellite/Fast.gif" />
 <img src="src/gifs/Satellite/Stop2.gif" />
@@ -33,3 +33,4 @@ The Lyft l5kit dataset includes over 1000 hours of agent information. Given agen
     ├── build                   # Compiled files 
     ├── public                  # Metdata files
     └── src                     # Source files for blog page
+You can see the details about our work [here!](https://deepnewworld.github.io/csci566-project/#/home)
