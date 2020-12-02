@@ -20,7 +20,7 @@ export default class SocialLSTM extends BaseComponent {
                         <p>
                             Alexandre, Kratarth, et. al. pointed out that humans have the innate ability to  “read” one another. Any autonomous vehicle navigating such a scene should be able to foresee the future positions of people (including vehicles driven by other people or pedestrians) and accordingly adjust its path to avoid collisions. Inspired by this paper, we want to take the “neighbor's” influence into consideration. For this project, we have one LSTM for each vehicle. This LSTM learns the spatial coordination and predicts their future positions as shown in the Figure 1.
                         </p>
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={slstm1}/>
                             <span>
                                 <strong>
@@ -34,7 +34,7 @@ export default class SocialLSTM extends BaseComponent {
 
                         </p>
         
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={slstmequ}/>
                             <span>
                                 <strong>
@@ -47,7 +47,7 @@ export default class SocialLSTM extends BaseComponent {
                                             The pseudo code is shown in Algorithm 1:
                         </p>
         
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={slstmcode}/>
                         </div>
         
@@ -72,7 +72,7 @@ export default class SocialLSTM extends BaseComponent {
                                 Based on this changes, the architecture changes as the follows:
                         </p>
         
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={slstm2}/>
                             <span>
                                 <strong>
@@ -87,7 +87,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
         
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={slstmequ2}/>
                         </div>
         
@@ -96,7 +96,7 @@ export default class SocialLSTM extends BaseComponent {
                         The training result is shown as follows:
                         </p>
         
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={result1}/>
                             <span>
                                 <strong>
@@ -123,7 +123,7 @@ export default class SocialLSTM extends BaseComponent {
                         </p>
         
                         
-                        <div style= {textAlign: 'center'}>
+                        <div style= {{textAlign: 'center'}}>
                             <img scr={result2}/>
                             <span>
                                 <strong>
