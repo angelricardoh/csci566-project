@@ -22,3 +22,11 @@ The Lyft l5kit dataset includes over 1000 hours of agent information. Given agen
 ![Car Turning](src/gifs/Satellite/Turning.gif)
 
 ![Car on Curved Street](src/gifs/Satellite/curvedStreet.gif)
+
+## Project Structure
+
+    .
+    ├── Models                  # Source code for ALL developed models
+    ├── build                   # Compiled files 
+    ├── public                  # Metdata files
+    └── src                     # Source files for blog page
