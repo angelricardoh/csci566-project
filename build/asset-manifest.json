@@ -1,24 +1,26 @@
 {
   "files": {
-    "main.css": "/csci566-project/static/css/main.b64e82eb.chunk.css",
-    "main.js": "/csci566-project/static/js/main.c318fbe8.chunk.js",
-    "main.js.map": "/csci566-project/static/js/main.c318fbe8.chunk.js.map",
+    "main.css": "/csci566-project/static/css/main.845b65f6.chunk.css",
+    "main.js": "/csci566-project/static/js/main.cbe36a0d.chunk.js",
+    "main.js.map": "/csci566-project/static/js/main.cbe36a0d.chunk.js.map",
     "runtime-main.js": "/csci566-project/static/js/runtime-main.09af2b4e.js",
     "runtime-main.js.map": "/csci566-project/static/js/runtime-main.09af2b4e.js.map",
     "static/css/2.1a02f21c.chunk.css": "/csci566-project/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.f2c4c50c.chunk.js": "/csci566-project/static/js/2.f2c4c50c.chunk.js",
-    "static/js/2.f2c4c50c.chunk.js.map": "/csci566-project/static/js/2.f2c4c50c.chunk.js.map",
+    "static/js/2.a7fbcced.chunk.js": "/csci566-project/static/js/2.a7fbcced.chunk.js",
+    "static/js/2.a7fbcced.chunk.js.map": "/csci566-project/static/js/2.a7fbcced.chunk.js.map",
     "static/js/3.1c0da050.chunk.js": "/csci566-project/static/js/3.1c0da050.chunk.js",
     "static/js/3.1c0da050.chunk.js.map": "/csci566-project/static/js/3.1c0da050.chunk.js.map",
     "index.html": "/csci566-project/index.html",
     "static/css/2.1a02f21c.chunk.css.map": "/csci566-project/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.b64e82eb.chunk.css.map": "/csci566-project/static/css/main.b64e82eb.chunk.css.map",
-    "static/js/2.f2c4c50c.chunk.js.LICENSE.txt": "/csci566-project/static/js/2.f2c4c50c.chunk.js.LICENSE.txt",
+    "static/css/main.845b65f6.chunk.css.map": "/csci566-project/static/css/main.845b65f6.chunk.css.map",
+    "static/js/2.a7fbcced.chunk.js.LICENSE.txt": "/csci566-project/static/js/2.a7fbcced.chunk.js.LICENSE.txt",
     "static/media/GAN1.a5d75e69.png": "/csci566-project/static/media/GAN1.a5d75e69.png",
     "static/media/GAN2.f236eade.png": "/csci566-project/static/media/GAN2.f236eade.png",
     "static/media/GAN3.b1c2e4d2.png": "/csci566-project/static/media/GAN3.b1c2e4d2.png",
     "static/media/GAN4.2d86396c.png": "/csci566-project/static/media/GAN4.2d86396c.png",
     "static/media/GAN5.bc8a36cc.png": "/csci566-project/static/media/GAN5.bc8a36cc.png",
+    "static/media/GAN6.a9ee5802.png": "/csci566-project/static/media/GAN6.a9ee5802.png",
+    "static/media/GAN7.da686091.png": "/csci566-project/static/media/GAN7.da686091.png",
     "static/media/LSTM-2CNN.de0202b9.png": "/csci566-project/static/media/LSTM-2CNN.de0202b9.png",
     "static/media/LSTM-All.fd1785c2.png": "/csci566-project/static/media/LSTM-All.fd1785c2.png",
     "static/media/LSTM-CNN.53f2e082.png": "/csci566-project/static/media/LSTM-CNN.53f2e082.png",
@@ -49,6 +51,9 @@
     "static/media/results4.5afba3fa.png": "/csci566-project/static/media/results4.5afba3fa.png",
     "static/media/results5.ad10f1c9.png": "/csci566-project/static/media/results5.ad10f1c9.png",
     "static/media/results6.9d8b216c.png": "/csci566-project/static/media/results6.9d8b216c.png",
+    "static/media/slstmcode.7c9fbe99.png": "/csci566-project/static/media/slstmcode.7c9fbe99.png",
+    "static/media/slstmtestloss.caf9bc79.png": "/csci566-project/static/media/slstmtestloss.caf9bc79.png",
+    "static/media/slstmtrainloss.46c9177c.png": "/csci566-project/static/media/slstmtrainloss.46c9177c.png",
     "static/media/vae1.510ea3d0.png": "/csci566-project/static/media/vae1.510ea3d0.png",
     "static/media/vae2.ebd21294.png": "/csci566-project/static/media/vae2.ebd21294.png",
     "static/media/vae3.9466ba20.png": "/csci566-project/static/media/vae3.9466ba20.png",
@@ -59,14 +64,13 @@
     "static/media/vae8.750d2809.png": "/csci566-project/static/media/vae8.750d2809.png",
     "static/media/vae9.02e156ca.png": "/csci566-project/static/media/vae9.02e156ca.png",
     "static/media/vaea.667bf8ac.png": "/csci566-project/static/media/vaea.667bf8ac.png",
-    "static/media/vaeb.04767882.png": "/csci566-project/static/media/vaeb.04767882.png",
-    "static/media/vaetable1.2d8c7ebf.png": "/csci566-project/static/media/vaetable1.2d8c7ebf.png"
+    "static/media/vaeb.04767882.png": "/csci566-project/static/media/vaeb.04767882.png"
   },
   "entrypoints": [
     "static/js/runtime-main.09af2b4e.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.f2c4c50c.chunk.js",
-    "static/css/main.b64e82eb.chunk.css",
-    "static/js/main.c318fbe8.chunk.js"
+    "static/js/2.a7fbcced.chunk.js",
+    "static/css/main.845b65f6.chunk.css",
+    "static/js/main.cbe36a0d.chunk.js"
   ]
 }
