@@ -15,15 +15,15 @@ export default function Methods() {
         <div>
             <h2>Methods</h2>
             <p>To resolve this issue, we have implemented various methods and compared their performance by test loss in the Result section below. 
-Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link to='/lstm'><b>LSTM/Seq2Seq LSTM</b></Link> models. Based on the LSTM model, we added VAE and GAN structure and created <Link to='/vae-lstm'><b>VAE+LSTM</b></Link> and <Link to='/seq2seqGAN'><b>Seq2Seq GAN</b></Link>. And finally, we implemented <Link to='/s-lstm'><b>Social LSTM</b></Link> which incorporates the neighbors' effect into the model</p>
+Firstly, we explored <Link to='/resnet-gru'><b>Resnet-Gru</b></Link> and <Link to='/lstm-seq2seq'><b>LSTM/Seq2Seq LSTM</b></Link> models. Based on the LSTM model, we added VAE and GAN structure and created <Link to='/vae-lstm'><b>VAE+LSTM</b></Link> and <Link to='/seq2seqGAN'><b>Seq2Seq GAN</b></Link>. And finally, we implemented <Link to='/s-lstm'><b>Social LSTM</b></Link> which incorporates the neighbors' effect into the model</p>
             <p>In this page, we mainly talk about the two most interesting models among these. For the detailed information about each model we created, please check the other tabs.</p>
             <p><i><b><Link to='/seq2seqGAN' className="link">Seq2Seq GAN</Link> and its variant</b></i></p>
             <figure style={{textAlign: 'center'}}><img src={GAN1} class='ganmodel'></img><figcaption>Figure 1. Generator of Seq2Seq GAN1</figcaption></figure>
             <figure style={{textAlign: 'center'}}><img src={GAN2} class='ganmodel'/><figcaption>Figure 2. Discriminator of Seq2Seq GAN Model</figcaption></figure>
             <p>To the baseline LSTM model, we added the GAN and created a new model. We call this architecture <b>Seq2Seq GAN.</b> In this model, the generator generates the next 50 moves based on the past 11 positions. The discriminator determines whether it’s real or fake. We expected that this structure can avoid blurry predictions and make more accurate predictions.</p>                 
-            <p>To improve Seq2Seq GAN1, we incorporated the past yaw information as well and made a Seq2Seq GAN Model-2.</p>
-            <figure style={{textAlign: 'center'}}><img src={GAN3} class='ganmodel'/><figcaption>Figure 3. Generator of Seq2Seq GAN Model-2 (with yaw information)</figcaption></figure>
-            <p>As you see the Table 1, compared to the Seq2Seq GAN1, the Seq2Seq GAN Model-2 was improved in the sense of test loss under the same conditions.</p>
+            <p>To improve Seq2Seq GAN1, we incorporated the past yaw information as well and made a Seq2Seq GAN2.</p>
+            <figure style={{textAlign: 'center'}}><img src={GAN3} class='ganmodel'/><figcaption>Figure 3. Generator of Seq2Seq GAN2 (with yaw information)</figcaption></figure>
+            <p>As you see the Table 1, compared to the Seq2Seq GAN1, the Seq2Seq GAN2 was improved in the sense of test loss under the same conditions.</p>
             <table style={{width: '500pt', tableLayout: 'fixed'}}>
                 <caption>Table 1. Test Losses of different Seq2Seq GAN Models</caption>
                 <tr>

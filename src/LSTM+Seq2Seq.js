@@ -1,6 +1,6 @@
 import React from "react";
 import BaseComponent from './BaseComponent'
-import "./LSTM.css";
+import "./LSTM+Seq2Seq.css";
 
 export default class LSTM extends BaseComponent {
     render() {

@@ -6,7 +6,7 @@ import "./App.css";
 import MainContainer from "./MainContainer";
 import ResnetGNU from './ResnetGNU';
 import Seq2Seq from './Seq2Seq';
-import LSTM from './LSTM';
+import LSTM from './LSTM+Seq2Seq';
 import VAELSTM from './VAELSTM';
 import Seq2SeqGAN from './Seq2SeqGAN';
 import SocialLSTM from './SocialLSTM';
@@ -25,12 +25,8 @@ export default function App() {
                         component={() => <ResnetGNU key='resnet-gru' page='resnet-gru'/>}
                 />
                 <Route exact
-                        path="/lstm"
+                        path="/lstm-seq2seq"
                         component={() => <LSTM key='lstm' page='lstm'/>}
-                />
-                <Route exact
-                        path="/seq2seq"
-                        component={() => <Seq2Seq key='seq2seq' page='seq2seq'/>}
                 />
                 <Route exact
                         path="/vae-lstm"

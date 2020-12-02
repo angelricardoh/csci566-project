@@ -25,7 +25,7 @@ class Header extends Component {
                     <Navbar.Toggle
                         aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className='mr-auto nav-section' activeKey='7'>
+                        <Nav className='mr-auto nav-section' activeKey='6'>
                             <Nav.Link
                                 eventKey='0'
                                 as={RouterNavLink}
@@ -41,29 +41,23 @@ class Header extends Component {
                             <Nav.Link
                                 eventKey='2'
                                 as={RouterNavLink}
-                                to="/lstm">
+                                to="/lstm-seq2seq">
                                 LSTM
                             </Nav.Link>
                             <Nav.Link
                                 eventKey='3'
                                 as={RouterNavLink}
-                                to="/seq2seq">
-                                Seq2Seq
-                            </Nav.Link>
-                            <Nav.Link
-                                eventKey='4'
-                                as={RouterNavLink}
                                 to="/vae-lstm">
                                 VAE+LSTM
                             </Nav.Link>
                             <Nav.Link
-                                eventKey='5'
+                                eventKey='4'
                                 as={RouterNavLink}
                                 to="/seq2seqGAN">
                                 Seq2SeqGAN
                             </Nav.Link>
                             <Nav.Link
-                                eventKey='6'
+                                eventKey='5'
                                 as={RouterNavLink}
                                 to="/s-lstm">
                                 Social LSTM
