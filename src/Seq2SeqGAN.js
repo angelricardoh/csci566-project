@@ -56,7 +56,9 @@ export default class Seq2SeqGAN extends BaseComponent {
                         <p>
                             Other than the generator model we have discussed above, we have implemented a new generator that contains yaw information taking the direction information into our model. As in Figure3, the encoder takes history positions and yaw information as input. We believed that this would improve our model and found out that the Seq2Seq GAN2 has lower MSE test loss than the Seq2Seq GAN1.             
                         </p>
+
                <div>
+                <table>
                     <table style={{width: '300pt', tableLayout: 'fixed'}}>
                         <caption>Table 1. Test Losses of different Seq2Seq GAN Models </caption>
                         <tr>
@@ -74,8 +76,144 @@ export default class Seq2SeqGAN extends BaseComponent {
                             <td>2</td>
                             <td>2576</td>
                         </tr>
-                    </table>
+                </table>
+               </div>
+                <div style={{textAlign: 'center'}}>
+                    <img src={GAN4}/>
+                    <span>
+                        <strong> 
+                            Figure 4.  Training loss graphs( lr = 1e-3 )
+                        </strong> 
+                    </span>
                 </div>
+                <p>
+                    These are the loss graphs from a Seq2Seq GAN model. In this model, we have used MSE loss for the generator loss and BCE loss for the discriminator. MSE loss function allows a model to learn directly from the target value. As you see from Figure 4, generator loss converges to 0. This is desirable since we use a generator to generate future trajectory. Moreover, validation loss follows similar behavior as training loss, and it shows that our model is not overfitted.                                
+                </p>
+                <h2>Fine Tuning</h2>
+                <p>
+                    We have tested many different hyperparameters for fine tuning  to improve  two Seq2Seq GAN models above.
+                    Firstly, we tested the Seq2Seq GAN1 with different epochs and we got the following result.
+                </p>
+
+               <div>
+                <table>
+                    <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                        <caption>Table 2. Test Losses on Seq2Seq GAN1 with different epochs </caption>
+                        <tr>
+                            <th><b>Configuration</b></th>
+                            <th><b>Epochs</b></th>
+                            <th><b>Test Loss(MSE)</b></th>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GANl1-v2</td>
+                            <td>1</td>
+                            <td>2.6551</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GANl1-v2</td>
+                            <td>2</td>
+                            <td>1.9143</td>
+                        </tr>
+                </table>
+               </div>
+                <p>
+                    As the result in Table2, the MSE test loss becomes much lower when we trained the model with more epochs.                                
+                </p>
+                <p>
+                    Next, we have tried training our models with different loss functions in the generator - BCE and MSE, remaining other conditions the same. With BCE loss, the generator loss indicates how well generated trajectories resemble the target trajectories. On the contrary, applying MSE loss function on the generator directly calculated the loss between the predicted future positions and the ground truth positions.                 
+                </p>
+               <div>
+                <table>
+                    <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                        <caption>Table 3. Test Losses on Seq2Seq GAN models with different Loss functions in the generator </caption>
+                        <tr>
+                            <th><b>Configuration</b></th>
+                            <th><b>Epochs</b></th>
+                            <th><b>Generator’s Loss function</b></th>                                
+                            <th><b>Test Loss(MSE)</b></th>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GANl1-v1</td>
+                            <td>1</td>
+                            <td>BCE</td>
+                            <td>78.5733</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GANl1-v2</td>
+                            <td>1</td>
+                            <td>MSE</td>
+                            <td>2.5441</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN2-v1</td>
+                            <td>1</td>
+                            <td>BCE</td>
+                            <td>78.55</td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN2-v2</td>
+                            <td>1</td>
+                            <td>MSE</td>
+                            <td>2.2576</td>
+                        </tr>   
+                </table>
+               </div>
+                <p>
+                    As in the Table3, on both models, the MSE test loss becomes much lower when we trained the model with more epochs because the model directly learns from the target trajectories with MSE loss functions and it might be difficult for BCE loss to give meaningful feedback when we predicted 50 future moves.                                
+                </p>
+                <p>
+                    We modified the layers in the discriminator and compared the test losses because we believe that the discriminator loss converges to 0 too quickly, which prevents the generator from learning effectively. Instead of the Relu activation function layer, we used LeakyRelu and also applied dropout and the batch normalization. Table 4 shows the result from this trial. For all the models in Table 4, we applied MSE loss function to the generators and trained with 1 epoch.                        
+                </p>
+               <div>
+                <table>
+                    <table style={{width: '300pt', tableLayout: 'fixed'}}>
+                        <caption>Table 4. Test Loss on Seq2Seq GAN models with different layers in the discriminators. </caption>
+                        <tr>
+                            <th><b>Configuration</b></th>
+                            <th><b>Layers in discriminator</b></th>
+                            <th><b>Test Loss(MSE)</b></th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th><b>Activation Function</b></th>
+                            <th><b>Dropout, Batch Normalization</b></th>
+                            <th></th>                                
+                        </tr>
+
+                        <tr>
+                            <td>Seq2Seq GANl1-v2-1</td>
+                            <td>Relu</td>
+                            <td>Not Applied</td>
+                            <td>72.6551</td>
+                        </tr>
+
+                        <tr>
+                            <td><b>Seq2Seq GANl1-v2-2</b></td>
+                            <td><b>Leaky Relu</b></td>
+                            <td><b>Applied</b></td>
+                            <td><b>2.5579</b></td>
+                        </tr>
+                        <tr>
+                            <td>Seq2Seq GAN2-v2-1</td>
+                            <td>Relu</td>
+                            <td>Not Applied</td>
+                            <td>2.2576</td>
+                        </tr>
+                        <tr>
+                            <td><b>Seq2Seq GAN2-v2-2</b></td>
+                            <td><b>Leaky Relu</b></td>
+                            <td><b>Applied</b></td>
+                            <td><b>2.1783</b></td>
+                        </tr>
+                </table>
+               </div>
+                <p>
+                    As in the Table4, applying LeakyRelu, dropout and batch normalization could reduce the MSE test loss on our models.                                
+                </p>
+                <p>
+                    With this success, we applied another change on the optimizer to see that the generator can learn better with this change. We’re currently using Adam in the generator and the discriminator as optimizers. To prevent the discriminator from learning too fast which might affect the generator’s performance, we applied different values of learning rate on the optimizer in the discriminator and saw the result. The other conditions for all the models in the Table 5 are the same - epoch of 1, MSE loss function for the generators. 
+                </p>
+
               </div>
            </div>
         )
