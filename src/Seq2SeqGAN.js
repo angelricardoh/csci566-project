@@ -455,7 +455,7 @@ export default class Seq2SeqGAN extends BaseComponent {
                     Vx - x - 3 : With learning rate 1e-4<br/>
                 </p>
                 <p>
-                    For now, the best Seq2Seq GAN model is the one with epoch2. While this model achieved the lowest test loss with 1.9143, we believe that we can achieve much lower MSE test loss if we apply Leaky Relu, dropout, and the batch norm in the layers and apply the learning rate of 1e-4 to the optimizer in the discriminator.                     
+                    For now, the best Seq2Seq GAN model is the one with epoch2. While this model achieved the lowest test loss with 1.9143, we believe that we can achieve much lower MSE test loss if we apply Leaky Relu, dropout, and the batch norm layers and apply the learning rate of 1e-4 to the optimizer in the discriminator.                     
                 </p>
                 <h4>Future Work </h4>
                 <p>Although we have implemented many variant models of Seq2Seq GAN, we found some following limitations and these still give us chances to enhance our models with future works.</p>
